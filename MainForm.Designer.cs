@@ -36,6 +36,12 @@
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             panel2 = new Panel();
+            btnSearchCustomer = new Button();
+            btnNewSubscription = new Button();
+            label5 = new Label();
+            pictureBox2 = new PictureBox();
+            currentUserRole = new Label();
+            currentUserName = new Label();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
@@ -44,19 +50,16 @@
             closeAlllToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
-            currentUserName = new Label();
-            currentUserRole = new Label();
-            pictureBox2 = new PictureBox();
-            label5 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabel = new ToolStripStatusLabel();
+            btnNewCustomer = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -110,7 +113,7 @@
             pictureBox1.Location = new Point(12, 8);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(66, 58);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -126,9 +129,9 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 122, 77);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
-            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnNewCustomer);
+            panel2.Controls.Add(btnSearchCustomer);
+            panel2.Controls.Add(btnNewSubscription);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(currentUserRole);
@@ -138,6 +141,72 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(274, 380);
             panel2.TabIndex = 1;
+            // 
+            // btnSearchCustomer
+            // 
+            btnSearchCustomer.FlatStyle = FlatStyle.Flat;
+            btnSearchCustomer.ForeColor = Color.White;
+            btnSearchCustomer.Image = (Image)resources.GetObject("btnSearchCustomer.Image");
+            btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearchCustomer.Location = new Point(12, 205);
+            btnSearchCustomer.Name = "btnSearchCustomer";
+            btnSearchCustomer.Size = new Size(247, 39);
+            btnSearchCustomer.TabIndex = 6;
+            btnSearchCustomer.Text = "Search Customer";
+            btnSearchCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btnNewSubscription
+            // 
+            btnNewSubscription.FlatStyle = FlatStyle.Flat;
+            btnNewSubscription.ForeColor = Color.White;
+            btnNewSubscription.Image = (Image)resources.GetObject("btnNewSubscription.Image");
+            btnNewSubscription.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNewSubscription.Location = new Point(12, 167);
+            btnNewSubscription.Name = "btnNewSubscription";
+            btnNewSubscription.Size = new Size(247, 39);
+            btnNewSubscription.TabIndex = 4;
+            btnNewSubscription.Text = "New Subscription";
+            btnNewSubscription.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            label5.BorderStyle = BorderStyle.Fixed3D;
+            label5.Location = new Point(12, 101);
+            label5.Name = "label5";
+            label5.Size = new Size(247, 2);
+            label5.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(12, 21);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(66, 62);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 2;
+            pictureBox2.TabStop = false;
+            // 
+            // currentUserRole
+            // 
+            currentUserRole.AutoSize = true;
+            currentUserRole.Font = new Font("Verdana", 7F, FontStyle.Bold);
+            currentUserRole.ForeColor = Color.Silver;
+            currentUserRole.Location = new Point(84, 55);
+            currentUserRole.Name = "currentUserRole";
+            currentUserRole.Size = new Size(46, 12);
+            currentUserRole.TabIndex = 1;
+            currentUserRole.Text = "ADMIN";
+            // 
+            // currentUserName
+            // 
+            currentUserName.AutoSize = true;
+            currentUserName.Font = new Font("Verdana", 9F);
+            currentUserName.ForeColor = Color.White;
+            currentUserName.Location = new Point(84, 37);
+            currentUserName.Name = "currentUserName";
+            currentUserName.Size = new Size(93, 14);
+            currentUserName.TabIndex = 0;
+            currentUserName.Text = "ADMIN ADMIN";
             // 
             // menuStrip1
             // 
@@ -193,88 +262,41 @@
             aboutToolStripMenuItem.Size = new Size(107, 22);
             aboutToolStripMenuItem.Text = "About";
             // 
-            // currentUserName
+            // statusStrip1
             // 
-            currentUserName.AutoSize = true;
-            currentUserName.Font = new Font("Verdana", 9F);
-            currentUserName.ForeColor = Color.White;
-            currentUserName.Location = new Point(84, 31);
-            currentUserName.Name = "currentUserName";
-            currentUserName.Size = new Size(71, 14);
-            currentUserName.TabIndex = 0;
-            currentUserName.Text = "------- -----";
+            statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
+            statusStrip1.Location = new Point(274, 456);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(494, 22);
+            statusStrip1.TabIndex = 4;
+            statusStrip1.Text = "statusStrip1";
             // 
-            // currentUserRole
+            // toolStripStatusLabel
             // 
-            currentUserRole.AutoSize = true;
-            currentUserRole.Font = new Font("Verdana", 9F);
-            currentUserRole.ForeColor = Color.White;
-            currentUserRole.Location = new Point(84, 46);
-            currentUserRole.Name = "currentUserRole";
-            currentUserRole.Size = new Size(27, 14);
-            currentUserRole.TabIndex = 1;
-            currentUserRole.Text = "----";
+            toolStripStatusLabel.Font = new Font("Cascadia Code", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            toolStripStatusLabel.Name = "toolStripStatusLabel";
+            toolStripStatusLabel.Size = new Size(133, 17);
+            toolStripStatusLabel.Text = "toolStripStatusLabel1";
             // 
-            // pictureBox2
+            // btnNewCustomer
             // 
-            pictureBox2.Location = new Point(12, 21);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(66, 62);
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            // 
-            // label5
-            // 
-            label5.BorderStyle = BorderStyle.Fixed3D;
-            label5.Location = new Point(12, 101);
-            label5.Name = "label5";
-            label5.Size = new Size(247, 2);
-            label5.TabIndex = 3;
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 129);
-            button1.Name = "button1";
-            button1.Size = new Size(247, 39);
-            button1.TabIndex = 4;
-            button1.Text = "New Customer";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(12, 167);
-            button2.Name = "button2";
-            button2.Size = new Size(247, 39);
-            button2.TabIndex = 5;
-            button2.Text = "Update Customer";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.MiddleLeft;
-            button3.Location = new Point(12, 205);
-            button3.Name = "button3";
-            button3.Size = new Size(247, 39);
-            button3.TabIndex = 6;
-            button3.Text = "Search Customer";
-            button3.UseVisualStyleBackColor = true;
+            btnNewCustomer.FlatStyle = FlatStyle.Flat;
+            btnNewCustomer.ForeColor = Color.White;
+            btnNewCustomer.Image = (Image)resources.GetObject("btnNewCustomer.Image");
+            btnNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNewCustomer.Location = new Point(12, 129);
+            btnNewCustomer.Name = "btnNewCustomer";
+            btnNewCustomer.Size = new Size(247, 39);
+            btnNewCustomer.TabIndex = 7;
+            btnNewCustomer.Text = "New Customer";
+            btnNewCustomer.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(768, 478);
+            Controls.Add(statusStrip1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
@@ -283,16 +305,19 @@
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
-            Text = "MainForm";
+            Text = "OpenGYM - GYM Management System";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -318,8 +343,10 @@
         private Label currentUserRole;
         private Label currentUserName;
         private Label label5;
-        private Button button1;
-        private Button button3;
-        private Button button2;
+        private Button btnNewSubscription;
+        private Button btnSearchCustomer;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabel;
+        private Button btnNewCustomer;
     }
 }
