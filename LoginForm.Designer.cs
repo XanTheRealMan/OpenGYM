@@ -93,7 +93,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 9F);
-            label3.Location = new Point(220, 80);
+            label3.Location = new Point(220, 82);
             label3.Name = "label3";
             label3.Size = new Size(71, 14);
             label3.TabIndex = 2;
@@ -103,7 +103,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Verdana", 9F);
-            label4.Location = new Point(220, 132);
+            label4.Location = new Point(220, 136);
             label4.Name = "label4";
             label4.Size = new Size(69, 14);
             label4.TabIndex = 3;
@@ -111,18 +111,21 @@
             // 
             // loginUsername
             // 
-            loginUsername.Font = new Font("Verdana", 11.25F);
-            loginUsername.Location = new Point(220, 97);
+            loginUsername.BorderStyle = BorderStyle.FixedSingle;
+            loginUsername.Font = new Font("Verdana", 10F);
+            loginUsername.Location = new Point(220, 99);
             loginUsername.Name = "loginUsername";
-            loginUsername.Size = new Size(218, 26);
+            loginUsername.Size = new Size(218, 24);
             loginUsername.TabIndex = 4;
+            loginUsername.Text = "admin";
             // 
             // loginPassword
             // 
-            loginPassword.Font = new Font("Verdana", 11.25F);
-            loginPassword.Location = new Point(220, 149);
+            loginPassword.BorderStyle = BorderStyle.FixedSingle;
+            loginPassword.Font = new Font("Verdana", 10F);
+            loginPassword.Location = new Point(220, 153);
             loginPassword.Name = "loginPassword";
-            loginPassword.Size = new Size(218, 26);
+            loginPassword.Size = new Size(218, 24);
             loginPassword.TabIndex = 5;
             loginPassword.UseSystemPasswordChar = true;
             // 

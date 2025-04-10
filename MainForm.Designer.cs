@@ -36,6 +36,7 @@
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             panel2 = new Panel();
+            btnNewCustomer = new Button();
             btnSearchCustomer = new Button();
             btnNewSubscription = new Button();
             label5 = new Label();
@@ -52,7 +53,6 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
-            btnNewCustomer = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -141,6 +141,19 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(274, 380);
             panel2.TabIndex = 1;
+            // 
+            // btnNewCustomer
+            // 
+            btnNewCustomer.FlatStyle = FlatStyle.Flat;
+            btnNewCustomer.ForeColor = Color.White;
+            btnNewCustomer.Image = (Image)resources.GetObject("btnNewCustomer.Image");
+            btnNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNewCustomer.Location = new Point(12, 129);
+            btnNewCustomer.Name = "btnNewCustomer";
+            btnNewCustomer.Size = new Size(247, 39);
+            btnNewCustomer.TabIndex = 7;
+            btnNewCustomer.Text = "New Customer";
+            btnNewCustomer.UseVisualStyleBackColor = true;
             // 
             // btnSearchCustomer
             // 
@@ -275,21 +288,7 @@
             // 
             toolStripStatusLabel.Font = new Font("Cascadia Code", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             toolStripStatusLabel.Name = "toolStripStatusLabel";
-            toolStripStatusLabel.Size = new Size(133, 17);
-            toolStripStatusLabel.Text = "toolStripStatusLabel1";
-            // 
-            // btnNewCustomer
-            // 
-            btnNewCustomer.FlatStyle = FlatStyle.Flat;
-            btnNewCustomer.ForeColor = Color.White;
-            btnNewCustomer.Image = (Image)resources.GetObject("btnNewCustomer.Image");
-            btnNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNewCustomer.Location = new Point(12, 129);
-            btnNewCustomer.Name = "btnNewCustomer";
-            btnNewCustomer.Size = new Size(247, 39);
-            btnNewCustomer.TabIndex = 7;
-            btnNewCustomer.Text = "New Customer";
-            btnNewCustomer.UseVisualStyleBackColor = true;
+            toolStripStatusLabel.Size = new Size(0, 17);
             // 
             // MainForm
             // 
