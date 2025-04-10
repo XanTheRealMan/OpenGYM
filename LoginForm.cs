@@ -16,6 +16,8 @@
  * along with OpenGYM. If not, see <https://www.gnu.org/licenses/>.
  */
 
+using Microsoft.VisualBasic.ApplicationServices;
+
 namespace OpenGYM
 {
     public partial class LoginForm : Form
@@ -42,7 +44,19 @@ namespace OpenGYM
                 return;
             }
 
-            //TODO: Implement login logic here
+            //sample data
+            //TODO: replace with actual authentication logic
+            if (loginUsername.Text == "admin" && loginPassword.Text == "password")
+            {
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCloseClicked(object sender, EventArgs e)
