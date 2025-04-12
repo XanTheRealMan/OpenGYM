@@ -39,10 +39,12 @@
             textBox2 = new TextBox();
             label3 = new Label();
             panel4 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button2 = new Button();
+            panel6 = new Panel();
             button1 = new Button();
+            button2 = new Button();
+            panel5 = new Panel();
+            button4 = new Button();
+            button5 = new Button();
             textBox4 = new TextBox();
             label5 = new Label();
             textBox5 = new TextBox();
@@ -55,6 +57,8 @@
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -155,55 +159,73 @@
             // panel4
             // 
             panel4.BackColor = Color.White;
-            panel4.Controls.Add(button5);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button1);
+            panel4.Controls.Add(panel6);
+            panel4.Controls.Add(panel5);
             panel4.Dock = DockStyle.Bottom;
             panel4.Location = new Point(0, 259);
             panel4.Name = "panel4";
             panel4.Size = new Size(592, 47);
             panel4.TabIndex = 19;
             // 
-            // button5
+            // panel6
             // 
-            button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button5.Location = new Point(93, 9);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 29);
-            button5.TabIndex = 4;
-            button5.Text = "DELETE";
-            button5.UseVisualStyleBackColor = true;
+            panel6.Controls.Add(button1);
+            panel6.Controls.Add(button2);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(422, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(170, 47);
+            panel6.TabIndex = 1;
             // 
-            // button4
+            // button1
             // 
-            button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button4.Location = new Point(12, 9);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 29);
-            button4.TabIndex = 3;
-            button4.Text = "EDIT";
-            button4.UseVisualStyleBackColor = true;
+            button1.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button1.Location = new Point(84, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 29);
+            button1.TabIndex = 0;
+            button1.Text = "SAVE";
+            button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
             button2.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button2.Location = new Point(423, 9);
+            button2.Location = new Point(3, 8);
             button2.Name = "button2";
             button2.Size = new Size(75, 29);
             button2.TabIndex = 1;
             button2.Text = "CANCEL";
             button2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // panel5
             // 
-            button1.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button1.Location = new Point(504, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 29);
-            button1.TabIndex = 0;
-            button1.Text = "SAVE";
-            button1.UseVisualStyleBackColor = true;
+            panel5.Controls.Add(button4);
+            panel5.Controls.Add(button5);
+            panel5.Dock = DockStyle.Left;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(180, 47);
+            panel5.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button4.Location = new Point(12, 8);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 29);
+            button4.TabIndex = 3;
+            button4.Text = "EDIT";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button5.Location = new Point(93, 8);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 29);
+            button5.TabIndex = 4;
+            button5.Text = "DELETE";
+            button5.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -272,7 +294,8 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
             dateTimePicker1.Location = new Point(93, 132);
             dateTimePicker1.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(1950, 1, 1, 0, 0, 0, 0);
@@ -310,6 +333,8 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -339,5 +364,7 @@
         private ComboBox comboBox1;
         private Label label8;
         private DateTimePicker dateTimePicker1;
+        private Panel panel6;
+        private Panel panel5;
     }
 }

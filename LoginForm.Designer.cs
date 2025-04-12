@@ -117,7 +117,6 @@
             loginUsername.Name = "loginUsername";
             loginUsername.Size = new Size(218, 24);
             loginUsername.TabIndex = 4;
-            loginUsername.Text = "admin";
             // 
             // loginPassword
             // 

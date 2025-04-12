@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSubscriptionForm));
-            button5 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            panel4 = new Panel();
-            button4 = new Button();
             groupBox1 = new GroupBox();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
             label6 = new Label();
             label5 = new Label();
             panel3 = new Panel();
@@ -50,15 +46,20 @@
             button6 = new Button();
             textBox2 = new TextBox();
             groupBox3 = new GroupBox();
+            numericUpDown1 = new NumericUpDown();
             comboBox1 = new ComboBox();
             label3 = new Label();
-            textBox6 = new TextBox();
             label7 = new Label();
+            textBox6 = new TextBox();
             label8 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
-            numericUpDown1 = new NumericUpDown();
-            panel4.SuspendLayout();
+            panel4 = new Panel();
+            panel6 = new Panel();
+            button1 = new Button();
+            button2 = new Button();
+            panel5 = new Panel();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -66,71 +67,10 @@
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            panel4.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button5.Location = new Point(174, 9);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 28);
-            button5.TabIndex = 4;
-            button5.Text = "DELETE";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button3.Location = new Point(12, 9);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 28);
-            button3.TabIndex = 2;
-            button3.Text = "PRINT";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button2.Location = new Point(423, 9);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 28);
-            button2.TabIndex = 1;
-            button2.Text = "CANCEL";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button1.Location = new Point(504, 9);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 28);
-            button1.TabIndex = 0;
-            button1.Text = "SAVE";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(button5);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(button2);
-            panel4.Controls.Add(button1);
-            panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 261);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(592, 45);
-            panel4.TabIndex = 26;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button4.Location = new Point(93, 9);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 28);
-            button4.TabIndex = 3;
-            button4.Text = "EDIT";
-            button4.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -144,6 +84,24 @@
             groupBox1.TabIndex = 25;
             groupBox1.TabStop = false;
             groupBox1.Text = "Subscription";
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.Location = new Point(75, 45);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(196, 21);
+            dateTimePicker2.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.Location = new Point(75, 20);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(196, 21);
+            dateTimePicker1.TabIndex = 17;
             // 
             // label6
             // 
@@ -286,6 +244,16 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Payment";
             // 
+            // numericUpDown1
+            // 
+            numericUpDown1.DecimalPlaces = 2;
+            numericUpDown1.Location = new Point(83, 49);
+            numericUpDown1.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(188, 21);
+            numericUpDown1.TabIndex = 30;
+            numericUpDown1.ThousandsSeparator = true;
+            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
@@ -305,14 +273,6 @@
             label3.TabIndex = 14;
             label3.Text = "Method:";
             // 
-            // textBox6
-            // 
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(53, 116);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(526, 21);
-            textBox6.TabIndex = 17;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -323,6 +283,14 @@
             label7.TabIndex = 16;
             label7.Text = "Price:";
             // 
+            // textBox6
+            // 
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
+            textBox6.Location = new Point(53, 116);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(526, 21);
+            textBox6.TabIndex = 17;
+            // 
             // label8
             // 
             label8.AutoSize = true;
@@ -332,50 +300,106 @@
             label8.TabIndex = 29;
             label8.Text = "Note:";
             // 
-            // dateTimePicker1
+            // panel4
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(75, 20);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(196, 21);
-            dateTimePicker1.TabIndex = 17;
+            panel4.BackColor = Color.White;
+            panel4.Controls.Add(panel6);
+            panel4.Controls.Add(panel5);
+            panel4.Dock = DockStyle.Bottom;
+            panel4.Location = new Point(0, 259);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(592, 47);
+            panel4.TabIndex = 30;
             // 
-            // dateTimePicker2
+            // panel6
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(75, 45);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(196, 21);
-            dateTimePicker2.TabIndex = 18;
+            panel6.Controls.Add(button1);
+            panel6.Controls.Add(button2);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(422, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(170, 47);
+            panel6.TabIndex = 1;
             // 
-            // numericUpDown1
+            // button1
             // 
-            numericUpDown1.DecimalPlaces = 2;
-            numericUpDown1.Location = new Point(83, 49);
-            numericUpDown1.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(188, 21);
-            numericUpDown1.TabIndex = 30;
-            numericUpDown1.ThousandsSeparator = true;
+            button1.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button1.Location = new Point(84, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 29);
+            button1.TabIndex = 0;
+            button1.Text = "SAVE";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button2.Location = new Point(3, 8);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 29);
+            button2.TabIndex = 1;
+            button2.Text = "CANCEL";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(button3);
+            panel5.Controls.Add(button4);
+            panel5.Controls.Add(button5);
+            panel5.Dock = DockStyle.Left;
+            panel5.Location = new Point(0, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(251, 47);
+            panel5.TabIndex = 0;
+            // 
+            // button3
+            // 
+            button3.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button3.Location = new Point(8, 8);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 29);
+            button3.TabIndex = 31;
+            button3.Text = "PRINT";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button4.Location = new Point(89, 8);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 29);
+            button4.TabIndex = 3;
+            button4.Text = "EDIT";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button5.Location = new Point(170, 8);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 29);
+            button5.TabIndex = 4;
+            button5.Text = "DELETE";
+            button5.UseVisualStyleBackColor = true;
             // 
             // NewSubscriptionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(592, 306);
+            Controls.Add(panel4);
             Controls.Add(label8);
             Controls.Add(groupBox3);
             Controls.Add(textBox6);
             Controls.Add(groupBox2);
-            Controls.Add(panel4);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(panel1);
             Font = new Font("Verdana", 8.25F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "NewSubscriptionForm";
-            Text = "NewSubscriptionForm";
-            panel4.ResumeLayout(false);
+            ShowIcon = false;
+            Text = "New Subscription";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel3.ResumeLayout(false);
@@ -388,18 +412,14 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            panel4.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button5;
-        private Button button3;
-        private Button button2;
-        private Button button1;
-        private Panel panel4;
-        private Button button4;
         private GroupBox groupBox1;
         private Label label6;
         private Label label5;
@@ -423,5 +443,13 @@
         private DateTimePicker dateTimePicker2;
         private DateTimePicker dateTimePicker1;
         private NumericUpDown numericUpDown1;
+        private Panel panel4;
+        private Panel panel6;
+        private Button button1;
+        private Button button2;
+        private Panel panel5;
+        private Button button3;
+        private Button button4;
+        private Button button5;
     }
 }

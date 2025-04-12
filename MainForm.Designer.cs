@@ -70,7 +70,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(768, 74);
+            panel1.Size = new Size(1023, 74);
             panel1.TabIndex = 0;
             // 
             // panel3
@@ -121,7 +121,7 @@
             // 
             panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(-106, 0);
+            panel4.Location = new Point(149, 0);
             panel4.Name = "panel4";
             panel4.Size = new Size(874, 74);
             panel4.TabIndex = 1;
@@ -139,7 +139,7 @@
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 98);
             panel2.Name = "panel2";
-            panel2.Size = new Size(274, 380);
+            panel2.Size = new Size(274, 471);
             panel2.TabIndex = 1;
             // 
             // btnNewCustomer
@@ -206,9 +206,9 @@
             currentUserRole.ForeColor = Color.Silver;
             currentUserRole.Location = new Point(84, 55);
             currentUserRole.Name = "currentUserRole";
-            currentUserRole.Size = new Size(46, 12);
+            currentUserRole.Size = new Size(25, 12);
             currentUserRole.TabIndex = 1;
-            currentUserRole.Text = "ADMIN";
+            currentUserRole.Text = "----";
             // 
             // currentUserName
             // 
@@ -217,16 +217,16 @@
             currentUserName.ForeColor = Color.White;
             currentUserName.Location = new Point(84, 37);
             currentUserName.Name = "currentUserName";
-            currentUserName.Size = new Size(93, 14);
+            currentUserName.Size = new Size(56, 14);
             currentUserName.TabIndex = 0;
-            currentUserName.Text = "ADMIN ADMIN";
+            currentUserName.Text = "---- -----";
             // 
             // menuStrip1
             // 
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, windowsToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(768, 24);
+            menuStrip1.Size = new Size(1023, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -278,9 +278,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip1.Location = new Point(274, 456);
+            statusStrip1.Location = new Point(274, 547);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(494, 22);
+            statusStrip1.Size = new Size(749, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -294,7 +294,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(768, 478);
+            ClientSize = new Size(1023, 569);
             Controls.Add(statusStrip1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -303,6 +303,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
+            MinimumSize = new Size(1039, 608);
             Name = "MainForm";
             Text = "OpenGYM - GYM Management System";
             WindowState = FormWindowState.Maximized;
