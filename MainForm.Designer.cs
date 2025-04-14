@@ -48,11 +48,11 @@
             logoutToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             windowsToolStripMenuItem = new ToolStripMenuItem();
-            closeAlllToolStripMenuItem = new ToolStripMenuItem();
+            closeAllToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
-            statusStrip1 = new StatusStrip();
             toolStripStatusLabel = new ToolStripStatusLabel();
+            statusStrip1 = new StatusStrip();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -240,27 +240,27 @@
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(112, 22);
+            logoutToolStripMenuItem.Size = new Size(180, 22);
             logoutToolStripMenuItem.Text = "Logout";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(112, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // windowsToolStripMenuItem
             // 
-            windowsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closeAlllToolStripMenuItem });
+            windowsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closeAllToolStripMenuItem });
             windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
             windowsToolStripMenuItem.Size = new Size(68, 20);
             windowsToolStripMenuItem.Text = "Windows";
             // 
-            // closeAlllToolStripMenuItem
+            // closeAllToolStripMenuItem
             // 
-            closeAlllToolStripMenuItem.Name = "closeAlllToolStripMenuItem";
-            closeAlllToolStripMenuItem.Size = new Size(123, 22);
-            closeAlllToolStripMenuItem.Text = "Close Alll";
+            closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
+            closeAllToolStripMenuItem.Size = new Size(180, 22);
+            closeAllToolStripMenuItem.Text = "Close All";
             // 
             // helpToolStripMenuItem
             // 
@@ -275,6 +275,12 @@
             aboutToolStripMenuItem.Size = new Size(107, 22);
             aboutToolStripMenuItem.Text = "About";
             // 
+            // toolStripStatusLabel
+            // 
+            toolStripStatusLabel.Font = new Font("Cascadia Code", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            toolStripStatusLabel.Name = "toolStripStatusLabel";
+            toolStripStatusLabel.Size = new Size(0, 17);
+            // 
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
@@ -283,12 +289,6 @@
             statusStrip1.Size = new Size(749, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel
-            // 
-            toolStripStatusLabel.Font = new Font("Cascadia Code", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            toolStripStatusLabel.Name = "toolStripStatusLabel";
-            toolStripStatusLabel.Size = new Size(0, 17);
             // 
             // MainForm
             // 
@@ -335,7 +335,7 @@
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem closeAlllToolStripMenuItem;
+        private ToolStripMenuItem closeAllToolStripMenuItem;
         private PictureBox pictureBox1;
         private Label label2;
         private Label label1;
@@ -345,8 +345,8 @@
         private Label label5;
         private Button btnNewSubscription;
         private Button btnSearchCustomer;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel toolStripStatusLabel;
         private Button btnNewCustomer;
+        private ToolStripStatusLabel toolStripStatusLabel;
+        private StatusStrip statusStrip1;
     }
 }

@@ -17,6 +17,7 @@
  */
 
 using Microsoft.VisualBasic.ApplicationServices;
+using OpenGYM.Database;
 
 namespace OpenGYM
 {
@@ -29,10 +30,11 @@ namespace OpenGYM
             this.btnClose.Click += btnCloseClicked;
         }
 
-        private void btnSubmitClicked(object sender, EventArgs e)
+        private async void btnSubmitClicked(object sender, EventArgs e)
         {
             errorProvider1.Clear();
             errorProvider2.Clear();
+
             if (string.IsNullOrWhiteSpace(loginUsername.Text))
             {
                 errorProvider1.SetError(loginUsername, "Please enter your username.");
@@ -44,18 +46,20 @@ namespace OpenGYM
                 return;
             }
 
-            //sample data
-            //TODO: replace with actual authentication logic
-            if (loginUsername.Text == "admin" && loginPassword.Text == "password")
+            string username = loginUsername.Text;
+            string password = Encryption.Encrypt(loginPassword.Text);
+
+            Database.User user = await Connection.GetUserAsync(username, password);
+            if (user == null || user.PasswordHash != password)
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
-                this.Hide();
+                MessageBox.Show("Invalid username or password.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
-                MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MainForm mainForm = new MainForm(user);
+                mainForm.Show();
+                this.Hide();
             }
         }
 

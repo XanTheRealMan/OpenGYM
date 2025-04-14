@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSubscriptionForm));
             groupBox1 = new GroupBox();
             dateTimePicker2 = new DateTimePicker();
             dateTimePicker1 = new DateTimePicker();
@@ -39,12 +38,11 @@
             label4 = new Label();
             panel2 = new Panel();
             textBox1 = new TextBox();
-            label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
             groupBox2 = new GroupBox();
+            comboBox2 = new ComboBox();
             button6 = new Button();
-            textBox2 = new TextBox();
             groupBox3 = new GroupBox();
             numericUpDown1 = new NumericUpDown();
             comboBox1 = new ComboBox();
@@ -78,7 +76,7 @@
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label5);
-            groupBox1.Location = new Point(12, 144);
+            groupBox1.Location = new Point(12, 151);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(277, 80);
             groupBox1.TabIndex = 25;
@@ -164,21 +162,11 @@
             // textBox1
             // 
             textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(6, 16);
+            textBox1.Location = new Point(133, 18);
             textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Customer Name";
-            textBox1.Size = new Size(347, 21);
+            textBox1.PlaceholderText = "Value";
+            textBox1.Size = new Size(359, 21);
             textBox1.TabIndex = 22;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 9F);
-            label2.Location = new Point(8, 83);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 14);
-            label2.TabIndex = 21;
-            label2.Text = "Customer:";
             // 
             // label1
             // 
@@ -203,33 +191,32 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(comboBox2);
             groupBox2.Controls.Add(button6);
-            groupBox2.Controls.Add(textBox2);
             groupBox2.Controls.Add(textBox1);
-            groupBox2.Location = new Point(87, 66);
+            groupBox2.Location = new Point(12, 66);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(493, 44);
+            groupBox2.Size = new Size(568, 51);
             groupBox2.TabIndex = 27;
             groupBox2.TabStop = false;
             // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Full Name", "Customer ID" });
+            comboBox2.Location = new Point(6, 17);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 21);
+            comboBox2.TabIndex = 25;
+            // 
             // button6
             // 
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(460, 16);
+            button6.Location = new Point(498, 17);
             button6.Name = "button6";
-            button6.Size = new Size(27, 20);
+            button6.Size = new Size(64, 24);
             button6.TabIndex = 24;
+            button6.Text = "FIND";
             button6.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(359, 16);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "Customer ID";
-            textBox2.Size = new Size(95, 21);
-            textBox2.TabIndex = 23;
             // 
             // groupBox3
             // 
@@ -237,7 +224,7 @@
             groupBox3.Controls.Add(comboBox1);
             groupBox3.Controls.Add(label3);
             groupBox3.Controls.Add(label7);
-            groupBox3.Location = new Point(303, 144);
+            groupBox3.Location = new Point(303, 151);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(277, 80);
             groupBox3.TabIndex = 28;
@@ -286,7 +273,7 @@
             // textBox6
             // 
             textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(53, 116);
+            textBox6.Location = new Point(53, 123);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(526, 21);
             textBox6.TabIndex = 17;
@@ -294,7 +281,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(11, 118);
+            label8.Location = new Point(11, 125);
             label8.Name = "label8";
             label8.Size = new Size(38, 13);
             label8.TabIndex = 29;
@@ -393,7 +380,6 @@
             Controls.Add(textBox6);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(label2);
             Controls.Add(panel1);
             Font = new Font("Verdana", 8.25F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -428,12 +414,10 @@
         private Label label4;
         private Panel panel2;
         private TextBox textBox1;
-        private Label label2;
         private Label label1;
         private Panel panel1;
         private GroupBox groupBox2;
         private Button button6;
-        private TextBox textBox2;
         private GroupBox groupBox3;
         private ComboBox comboBox1;
         private Label label3;
@@ -451,5 +435,6 @@
         private Button button3;
         private Button button4;
         private Button button5;
+        private ComboBox comboBox2;
     }
 }
