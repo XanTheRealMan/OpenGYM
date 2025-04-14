@@ -20,7 +20,3 @@ We welcome contributions from everyone who supports the power of free and open-s
 
 ## License
 This project is licensed under the GPL-v3 License. See the [LICENSE](LICENSE) file for more details.
-
-## Acknowledgements
-We would like to thank all the contributors and supporters of this project.  
-Your efforts help make this project better for the public.
