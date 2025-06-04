@@ -78,6 +78,24 @@ namespace OpenGYM.Database
             }
         }
 
+        public static async Task<Customer> GetLastCustomerID()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT TOP 1 CustomerID FROM Customers ORDER BY CustomerID DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return new Customer { CustomerID = (int)result };
+                    }
+                }
+            }
+            return null;
+        }
+
         public static async Task<Customer> LoadCustomerByName(string FullName)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -146,7 +164,7 @@ namespace OpenGYM.Database
             {
                 await connection.OpenAsync();
                 string query = "INSERT INTO Customers (FullName, Gender, DateOfBirth, Phone, Email, Address, CreatedAt) " +
-                               "OUTPUT INSERTED.CustomerID VALUES (@FullName, @Gender, @DateOfBirth, @Phone, @Email, @Address, @CreatedAt)";
+                               "OUTPUT INSERTED.CustomerID VALUES (@FullName, @Gender, @DateOfBirth, @Phone, @Email, @Address)";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@FullName", customer.FullName);
@@ -155,7 +173,6 @@ namespace OpenGYM.Database
                     command.Parameters.AddWithValue("@Phone", customer.Phone);
                     command.Parameters.AddWithValue("@Email", customer.Email);
                     command.Parameters.AddWithValue("@Address", customer.Address);
-                    command.Parameters.AddWithValue("@CreatedAt", customer.CreatedAt);
 
                     customer.CustomerID = (int)await command.ExecuteScalarAsync();
                 }

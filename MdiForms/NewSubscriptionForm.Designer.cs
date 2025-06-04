@@ -55,9 +55,9 @@
             button1 = new Button();
             button2 = new Button();
             panel5 = new Panel();
-            button3 = new Button();
             button4 = new Button();
             button5 = new Button();
+            button3 = new Button();
             groupBox1.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
@@ -161,8 +161,8 @@
             // 
             // textBox1
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(133, 18);
+            textBox1.Font = new Font("Verdana", 8.25F);
+            textBox1.Location = new Point(133, 17);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Value";
             textBox1.Size = new Size(359, 21);
@@ -202,6 +202,7 @@
             // 
             // comboBox2
             // 
+            comboBox2.Font = new Font("Verdana", 8.25F);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Full Name", "Customer ID" });
             comboBox2.Location = new Point(6, 17);
@@ -339,18 +340,9 @@
             panel5.Size = new Size(251, 47);
             panel5.TabIndex = 0;
             // 
-            // button3
-            // 
-            button3.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button3.Location = new Point(8, 8);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 29);
-            button3.TabIndex = 31;
-            button3.Text = "PRINT";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // button4
             // 
+            button4.Enabled = false;
             button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
             button4.Location = new Point(89, 8);
             button4.Name = "button4";
@@ -361,6 +353,7 @@
             // 
             // button5
             // 
+            button5.Enabled = false;
             button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
             button5.Location = new Point(170, 8);
             button5.Name = "button5";
@@ -368,6 +361,17 @@
             button5.TabIndex = 4;
             button5.Text = "DELETE";
             button5.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Enabled = false;
+            button3.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            button3.Location = new Point(8, 8);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 29);
+            button3.TabIndex = 31;
+            button3.Text = "PRINT";
+            button3.UseVisualStyleBackColor = true;
             // 
             // NewSubscriptionForm
             // 
@@ -432,9 +436,9 @@
         private Button button1;
         private Button button2;
         private Panel panel5;
-        private Button button3;
         private Button button4;
         private Button button5;
         private ComboBox comboBox2;
+        private Button button3;
     }
 }

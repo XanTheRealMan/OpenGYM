@@ -31,34 +31,30 @@
             panel1 = new Panel();
             panel2 = new Panel();
             panel3 = new Panel();
-            textBox3 = new TextBox();
+            NewCustomerID = new TextBox();
             label4 = new Label();
             label1 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            CustomerFullName = new TextBox();
+            CustomerPhoneNumber = new TextBox();
             label3 = new Label();
             panel4 = new Panel();
             panel6 = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            panel5 = new Panel();
-            button4 = new Button();
-            button5 = new Button();
-            textBox4 = new TextBox();
+            btnSave = new Button();
+            btnCancel = new Button();
+            CustomerAddress = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            CustomerEmail = new TextBox();
             label6 = new Label();
             label7 = new Label();
-            comboBox1 = new ComboBox();
+            CustomerGender = new ComboBox();
             label8 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            CustomerBirthDate = new DateTimePicker();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
-            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -83,7 +79,7 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(textBox3);
+            panel3.Controls.Add(NewCustomerID);
             panel3.Controls.Add(label4);
             panel3.Dock = DockStyle.Top;
             panel3.Location = new Point(0, 0);
@@ -91,14 +87,14 @@
             panel3.Size = new Size(121, 41);
             panel3.TabIndex = 2;
             // 
-            // textBox3
+            // NewCustomerID
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(39, 10);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(70, 21);
-            textBox3.TabIndex = 15;
+            NewCustomerID.BorderStyle = BorderStyle.FixedSingle;
+            NewCustomerID.Enabled = false;
+            NewCustomerID.Location = new Point(39, 10);
+            NewCustomerID.Name = "NewCustomerID";
+            NewCustomerID.Size = new Size(70, 21);
+            NewCustomerID.TabIndex = 15;
             // 
             // label4
             // 
@@ -130,21 +126,21 @@
             label2.TabIndex = 10;
             label2.Text = "Full Name:";
             // 
-            // textBox1
+            // CustomerFullName
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(93, 81);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(194, 21);
-            textBox1.TabIndex = 11;
+            CustomerFullName.BorderStyle = BorderStyle.FixedSingle;
+            CustomerFullName.Location = new Point(93, 81);
+            CustomerFullName.Name = "CustomerFullName";
+            CustomerFullName.Size = new Size(194, 21);
+            CustomerFullName.TabIndex = 11;
             // 
-            // textBox2
+            // CustomerPhoneNumber
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(123, 106);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(164, 21);
-            textBox2.TabIndex = 13;
+            CustomerPhoneNumber.BorderStyle = BorderStyle.FixedSingle;
+            CustomerPhoneNumber.Location = new Point(123, 106);
+            CustomerPhoneNumber.Name = "CustomerPhoneNumber";
+            CustomerPhoneNumber.Size = new Size(164, 21);
+            CustomerPhoneNumber.TabIndex = 13;
             // 
             // label3
             // 
@@ -160,7 +156,6 @@
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(panel6);
-            panel4.Controls.Add(panel5);
             panel4.Dock = DockStyle.Bottom;
             panel4.Location = new Point(0, 259);
             panel4.Name = "panel4";
@@ -169,71 +164,41 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(button1);
-            panel6.Controls.Add(button2);
+            panel6.Controls.Add(btnSave);
+            panel6.Controls.Add(btnCancel);
             panel6.Dock = DockStyle.Right;
             panel6.Location = new Point(422, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(170, 47);
             panel6.TabIndex = 1;
             // 
-            // button1
+            // btnSave
             // 
-            button1.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button1.Location = new Point(84, 8);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 29);
-            button1.TabIndex = 0;
-            button1.Text = "SAVE";
-            button1.UseVisualStyleBackColor = true;
+            btnSave.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            btnSave.Location = new Point(84, 8);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 29);
+            btnSave.TabIndex = 0;
+            btnSave.Text = "SAVE";
+            btnSave.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button2.Location = new Point(3, 8);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 29);
-            button2.TabIndex = 1;
-            button2.Text = "CANCEL";
-            button2.UseVisualStyleBackColor = true;
+            btnCancel.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
+            btnCancel.Location = new Point(3, 8);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(75, 29);
+            btnCancel.TabIndex = 1;
+            btnCancel.Text = "CANCEL";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // CustomerAddress
             // 
-            panel5.Controls.Add(button4);
-            panel5.Controls.Add(button5);
-            panel5.Dock = DockStyle.Left;
-            panel5.Location = new Point(0, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(180, 47);
-            panel5.TabIndex = 0;
-            // 
-            // button4
-            // 
-            button4.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button4.Location = new Point(12, 8);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 29);
-            button4.TabIndex = 3;
-            button4.Text = "EDIT";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            button5.Location = new Point(93, 8);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 29);
-            button5.TabIndex = 4;
-            button5.Text = "DELETE";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(374, 107);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(191, 21);
-            textBox4.TabIndex = 23;
+            CustomerAddress.BorderStyle = BorderStyle.FixedSingle;
+            CustomerAddress.Location = new Point(374, 107);
+            CustomerAddress.Name = "CustomerAddress";
+            CustomerAddress.Size = new Size(191, 21);
+            CustomerAddress.TabIndex = 23;
             // 
             // label5
             // 
@@ -245,13 +210,13 @@
             label5.TabIndex = 22;
             label5.Text = "Address:";
             // 
-            // textBox5
+            // CustomerEmail
             // 
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(356, 81);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(209, 21);
-            textBox5.TabIndex = 21;
+            CustomerEmail.BorderStyle = BorderStyle.FixedSingle;
+            CustomerEmail.Location = new Point(356, 81);
+            CustomerEmail.Name = "CustomerEmail";
+            CustomerEmail.Size = new Size(209, 21);
+            CustomerEmail.TabIndex = 21;
             // 
             // label6
             // 
@@ -273,14 +238,13 @@
             label7.TabIndex = 24;
             label7.Text = "Gender:";
             // 
-            // comboBox1
+            // CustomerGender
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Male", "Female" });
-            comboBox1.Location = new Point(374, 132);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(191, 21);
-            comboBox1.TabIndex = 25;
+            CustomerGender.FormattingEnabled = true;
+            CustomerGender.Location = new Point(374, 132);
+            CustomerGender.Name = "CustomerGender";
+            CustomerGender.Size = new Size(191, 21);
+            CustomerGender.TabIndex = 25;
             // 
             // label8
             // 
@@ -292,34 +256,34 @@
             label8.TabIndex = 26;
             label8.Text = "Birth Date:";
             // 
-            // dateTimePicker1
+            // CustomerBirthDate
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            dateTimePicker1.Location = new Point(93, 132);
-            dateTimePicker1.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
-            dateTimePicker1.MinDate = new DateTime(1950, 1, 1, 0, 0, 0, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(194, 21);
-            dateTimePicker1.TabIndex = 27;
+            CustomerBirthDate.CustomFormat = "dd-MM-yyyy";
+            CustomerBirthDate.Format = DateTimePickerFormat.Custom;
+            CustomerBirthDate.Location = new Point(93, 132);
+            CustomerBirthDate.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            CustomerBirthDate.MinDate = new DateTime(1950, 1, 1, 0, 0, 0, 0);
+            CustomerBirthDate.Name = "CustomerBirthDate";
+            CustomerBirthDate.Size = new Size(194, 21);
+            CustomerBirthDate.TabIndex = 27;
             // 
             // NewCustomerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(592, 306);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(CustomerBirthDate);
             Controls.Add(label8);
-            Controls.Add(comboBox1);
+            Controls.Add(CustomerGender);
             Controls.Add(label7);
-            Controls.Add(textBox4);
+            Controls.Add(CustomerAddress);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(CustomerEmail);
             Controls.Add(label6);
             Controls.Add(panel4);
-            Controls.Add(textBox2);
+            Controls.Add(CustomerPhoneNumber);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(CustomerFullName);
             Controls.Add(label2);
             Controls.Add(panel1);
             Font = new Font("Verdana", 8.25F);
@@ -334,7 +298,6 @@
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -344,27 +307,24 @@
         private Panel panel1;
         private Label label1;
         private Label label2;
-        private TextBox textBox1;
-        private TextBox textBox3;
+        private TextBox CustomerFullName;
+        private TextBox NewCustomerID;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox CustomerPhoneNumber;
         private Label label3;
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
-        private Button button1;
-        private Button button2;
-        private Button button5;
-        private Button button4;
-        private TextBox textBox4;
+        private Button btnSave;
+        private Button btnCancel;
+        private TextBox CustomerAddress;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox CustomerEmail;
         private Label label6;
         private Label label7;
-        private ComboBox comboBox1;
+        private ComboBox CustomerGender;
         private Label label8;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker CustomerBirthDate;
         private Panel panel6;
-        private Panel panel5;
     }
 }
