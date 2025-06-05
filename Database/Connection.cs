@@ -163,7 +163,7 @@ namespace OpenGYM.Database
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 await connection.OpenAsync();
-                string query = "INSERT INTO Customers (FullName, Gender, DateOfBirth, Phone, Email, Address, CreatedAt) " +
+                string query = "INSERT INTO Customers (FullName, Gender, DateOfBirth, Phone, Email, Address) " +
                                "OUTPUT INSERTED.CustomerID VALUES (@FullName, @Gender, @DateOfBirth, @Phone, @Email, @Address)";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
@@ -174,7 +174,15 @@ namespace OpenGYM.Database
                     command.Parameters.AddWithValue("@Email", customer.Email);
                     command.Parameters.AddWithValue("@Address", customer.Address);
 
-                    customer.CustomerID = (int)await command.ExecuteScalarAsync();
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        customer.CustomerID = (int)result;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Failed to insert customer.");
+                    }
                 }
             }
             return customer;
