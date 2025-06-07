@@ -7,9 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using OpenGYM.Database;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace OpenGYM
 {
@@ -21,14 +19,14 @@ namespace OpenGYM
             _ = SetNewCustomerIDAsync();
             this.CustomerGender.DropDownStyle = ComboBoxStyle.DropDownList;
             this.CustomerGender.Items.AddRange(new object[] {
-                "Male",
-                "Female"
+                "ذكر",
+                "انثى"
             });
             this.CustomerGender.SelectedIndex = 0;
             this.btnSave.Click += SaveNewCustomer;
             this.btnCancel.Click += (s, e) => this.Close();
         }
-
+        
         private void SaveNewCustomer(object? sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(this.CustomerFullName.Text)
@@ -134,7 +132,11 @@ namespace OpenGYM
             this.CustomerGender.SelectedIndex = 0;
             this.CustomerBirthDate.Value = DateTime.Now;
 
-            _ = SetNewCustomerIDAsync();
+            int newCustomerID;
+            if (int.TryParse(this.NewCustomerID.Text, out newCustomerID))
+            {
+                this.NewCustomerID.Text = (newCustomerID + 1).ToString();
+            }
         }
     }
 }

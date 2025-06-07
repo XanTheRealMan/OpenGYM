@@ -28,8 +28,66 @@ namespace OpenGYM.Database
 {
     internal class Connection
     {
+        // database connection string
         private static readonly string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=OpenGYM;Integrated Security=True;TrustServerCertificate=True";
 
+        // Get the last inserted IDs for Customers, Memberships, and Payments
+
+        public static async Task<Customer> GetLastCustomerID()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT TOP 1 CustomerID FROM Customers ORDER BY CustomerID DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return new Customer { CustomerID = (int)result };
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static async Task<Membership> GetLastMembershipID()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT TOP 1 MembershipID FROM Memberships ORDER BY MembershipID DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return new Membership { MembershipID = (int)result };
+                    }
+                }
+            }
+            return null;
+        }
+
+        public static async Task<Payment> GetLastPaymentID()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT TOP 1 PaymentID FROM Payments ORDER BY PaymentID DESC";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        return new Payment { PaymentID = (int)result };
+                    }
+                }
+            }
+            return null;
+        }
+
+        // user functions
         public static async Task<User> GetUserAsync(string username, string password)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -63,6 +121,7 @@ namespace OpenGYM.Database
             return null;
         }
 
+        // customer functions
         public static bool IsCustomerExists(string FullName)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -78,22 +137,30 @@ namespace OpenGYM.Database
             }
         }
 
-        public static async Task<Customer> GetLastCustomerID()
+        public static async Task<List<CustomerSearch>> SearchCustomerByName(string Name)
         {
+            List<CustomerSearch> customers = new List<CustomerSearch>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 await connection.OpenAsync();
-                string query = "SELECT TOP 1 CustomerID FROM Customers ORDER BY CustomerID DESC";
+                string query = "SELECT * FROM Customers WHERE FullName LIKE @Name";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    object result = await command.ExecuteScalarAsync();
-                    if (result != null && result != DBNull.Value)
+                    command.Parameters.AddWithValue("@Name", "%" + Name + "%");
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
                     {
-                        return new Customer { CustomerID = (int)result };
+                        while (await reader.ReadAsync())
+                        {
+                            customers.Add(new CustomerSearch
+                            {
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                FullName = reader.GetString(reader.GetOrdinal("FullName"))
+                            });
+                        }
                     }
                 }
             }
-            return null;
+            return customers;
         }
 
         public static async Task<Customer> LoadCustomerByName(string FullName)
@@ -225,5 +292,10 @@ namespace OpenGYM.Database
                 }
             }
         }
+
+        // membership functions
+
+        // payment functions
+
     }
 }

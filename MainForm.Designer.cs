@@ -70,7 +70,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1023, 74);
+            panel1.Size = new Size(1023, 85);
             panel1.TabIndex = 0;
             // 
             // panel3
@@ -82,37 +82,37 @@
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(434, 74);
+            panel3.Size = new Size(435, 85);
             panel3.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 9F);
+            label2.Font = new Font("TT Mussels Trl Light", 11.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(84, 44);
+            label2.Location = new Point(84, 53);
             label2.Name = "label2";
-            label2.Size = new Size(339, 14);
+            label2.Size = new Size(350, 18);
             label2.TabIndex = 2;
-            label2.Text = "open-source software to manage gym subscriptions.";
+            label2.Text = "open-source software to manage gym subscriptions";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            label1.Font = new Font("TT Mussels Trl", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(84, 15);
+            label1.Location = new Point(84, 18);
             label1.Name = "label1";
-            label1.Size = new Size(126, 25);
+            label1.Size = new Size(135, 30);
             label1.TabIndex = 1;
             label1.Text = "OpenGYM";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 8);
+            pictureBox1.Location = new Point(12, 9);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(66, 58);
+            pictureBox1.Size = new Size(66, 67);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -121,9 +121,9 @@
             // 
             panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(149, 0);
+            panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(874, 74);
+            panel4.Size = new Size(1023, 85);
             panel4.TabIndex = 1;
             // 
             // panel2
@@ -137,54 +137,57 @@
             panel2.Controls.Add(currentUserRole);
             panel2.Controls.Add(currentUserName);
             panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 98);
+            panel2.Location = new Point(0, 109);
             panel2.Name = "panel2";
-            panel2.Size = new Size(274, 471);
+            panel2.Size = new Size(274, 548);
             panel2.TabIndex = 1;
             // 
             // btnNewCustomer
             // 
             btnNewCustomer.FlatStyle = FlatStyle.Flat;
+            btnNewCustomer.Font = new Font("HONOR Sans Arabic UI R", 10F);
             btnNewCustomer.ForeColor = Color.White;
             btnNewCustomer.Image = (Image)resources.GetObject("btnNewCustomer.Image");
             btnNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNewCustomer.Location = new Point(12, 129);
+            btnNewCustomer.Location = new Point(12, 149);
             btnNewCustomer.Name = "btnNewCustomer";
-            btnNewCustomer.Size = new Size(247, 39);
+            btnNewCustomer.Size = new Size(247, 45);
             btnNewCustomer.TabIndex = 7;
-            btnNewCustomer.Text = "New Customer";
+            btnNewCustomer.Text = "عميل جديد";
             btnNewCustomer.UseVisualStyleBackColor = true;
             // 
             // btnSearchCustomer
             // 
             btnSearchCustomer.FlatStyle = FlatStyle.Flat;
+            btnSearchCustomer.Font = new Font("HONOR Sans Arabic UI R", 10F);
             btnSearchCustomer.ForeColor = Color.White;
             btnSearchCustomer.Image = (Image)resources.GetObject("btnSearchCustomer.Image");
             btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearchCustomer.Location = new Point(12, 205);
+            btnSearchCustomer.Location = new Point(12, 197);
             btnSearchCustomer.Name = "btnSearchCustomer";
-            btnSearchCustomer.Size = new Size(247, 39);
+            btnSearchCustomer.Size = new Size(247, 45);
             btnSearchCustomer.TabIndex = 6;
-            btnSearchCustomer.Text = "Search Customer";
+            btnSearchCustomer.Text = "بحث عن عميل";
             btnSearchCustomer.UseVisualStyleBackColor = true;
             // 
             // btnNewSubscription
             // 
             btnNewSubscription.FlatStyle = FlatStyle.Flat;
+            btnNewSubscription.Font = new Font("HONOR Sans Arabic UI R", 10F);
             btnNewSubscription.ForeColor = Color.White;
             btnNewSubscription.Image = (Image)resources.GetObject("btnNewSubscription.Image");
             btnNewSubscription.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNewSubscription.Location = new Point(12, 167);
+            btnNewSubscription.Location = new Point(12, 245);
             btnNewSubscription.Name = "btnNewSubscription";
-            btnNewSubscription.Size = new Size(247, 39);
+            btnNewSubscription.Size = new Size(247, 45);
             btnNewSubscription.TabIndex = 4;
-            btnNewSubscription.Text = "New Subscription";
+            btnNewSubscription.Text = "إشتراك جديد";
             btnNewSubscription.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             label5.BorderStyle = BorderStyle.Fixed3D;
-            label5.Location = new Point(12, 101);
+            label5.Location = new Point(12, 117);
             label5.Name = "label5";
             label5.Size = new Size(247, 2);
             label5.TabIndex = 3;
@@ -192,32 +195,30 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 21);
+            pictureBox2.Location = new Point(193, 24);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(66, 62);
+            pictureBox2.Size = new Size(66, 72);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 2;
             pictureBox2.TabStop = false;
             // 
             // currentUserRole
             // 
-            currentUserRole.AutoSize = true;
-            currentUserRole.Font = new Font("Verdana", 7F, FontStyle.Bold);
+            currentUserRole.Font = new Font("HONOR Sans Arabic UI R", 9F);
             currentUserRole.ForeColor = Color.Silver;
-            currentUserRole.Location = new Point(84, 55);
+            currentUserRole.Location = new Point(12, 63);
             currentUserRole.Name = "currentUserRole";
-            currentUserRole.Size = new Size(25, 12);
+            currentUserRole.Size = new Size(175, 17);
             currentUserRole.TabIndex = 1;
-            currentUserRole.Text = "----";
+            currentUserRole.Text = "---- -----";
             // 
             // currentUserName
             // 
-            currentUserName.AutoSize = true;
-            currentUserName.Font = new Font("Verdana", 9F);
+            currentUserName.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
             currentUserName.ForeColor = Color.White;
-            currentUserName.Location = new Point(84, 37);
+            currentUserName.Location = new Point(12, 43);
             currentUserName.Name = "currentUserName";
-            currentUserName.Size = new Size(56, 14);
+            currentUserName.Size = new Size(175, 18);
             currentUserName.TabIndex = 0;
             currentUserName.Text = "---- -----";
             // 
@@ -234,46 +235,46 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { logoutToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
-            fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.Size = new Size(42, 20);
+            fileToolStripMenuItem.Text = "ملف";
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(180, 22);
-            logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Size = new Size(135, 22);
+            logoutToolStripMenuItem.Text = "تسجيل خروج";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
-            exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Size = new Size(135, 22);
+            exitToolStripMenuItem.Text = "إغلاق";
             // 
             // windowsToolStripMenuItem
             // 
             windowsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { closeAllToolStripMenuItem });
             windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            windowsToolStripMenuItem.Size = new Size(68, 20);
-            windowsToolStripMenuItem.Text = "Windows";
+            windowsToolStripMenuItem.Size = new Size(51, 20);
+            windowsToolStripMenuItem.Text = "النوافذ";
             // 
             // closeAllToolStripMenuItem
             // 
             closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            closeAllToolStripMenuItem.Size = new Size(180, 22);
-            closeAllToolStripMenuItem.Text = "Close All";
+            closeAllToolStripMenuItem.Size = new Size(124, 22);
+            closeAllToolStripMenuItem.Text = "إغلاق الكل";
             // 
             // helpToolStripMenuItem
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
-            helpToolStripMenuItem.Text = "Help";
+            helpToolStripMenuItem.Size = new Size(58, 20);
+            helpToolStripMenuItem.Text = "مساعدة";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(107, 22);
-            aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Size = new Size(130, 22);
+            aboutToolStripMenuItem.Text = "عن التطبيق";
             // 
             // toolStripStatusLabel
             // 
@@ -284,7 +285,7 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel });
-            statusStrip1.Location = new Point(274, 547);
+            statusStrip1.Location = new Point(274, 635);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(749, 22);
             statusStrip1.TabIndex = 4;
@@ -292,27 +293,27 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1023, 569);
+            ClientSize = new Size(1023, 657);
             Controls.Add(statusStrip1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
-            Font = new Font("Verdana", 8.25F);
             Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
-            MinimumSize = new Size(1039, 608);
+            MinimumSize = new Size(1039, 696);
             Name = "MainForm";
-            Text = "OpenGYM - GYM Management System";
+            RightToLeft = RightToLeft.Yes;
+            RightToLeftLayout = true;
+            Text = "منظومة إدارة النوادي الرياضية";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

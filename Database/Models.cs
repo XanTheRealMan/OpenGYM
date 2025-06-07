@@ -46,6 +46,12 @@ namespace OpenGYM.Database
         public DateTime CreatedAt { get; set; }
     }
 
+    public class CustomerSearch
+    {
+        public int CustomerID { get; set; }
+        public string FullName { get; set; }
+    }
+
     public class Membership
     {
         public int MembershipID { get; set; }
@@ -59,6 +65,7 @@ namespace OpenGYM.Database
     {
         public int PaymentID { get; set; }
         public int CustomerID { get; set; }
+        public int MembershipID { get; set; }
         public decimal Amount { get; set; }
         public DateTime PaymentDate { get; set; }
         public string PaymentMethod { get; set; }

@@ -56,35 +56,35 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(460, 70);
+            panel1.Size = new Size(460, 67);
             panel1.TabIndex = 0;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Verdana", 9F);
-            label2.Location = new Point(12, 40);
+            label2.Font = new Font("HONOR Sans Arabic UI R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(222, 39);
             label2.Name = "label2";
-            label2.Size = new Size(408, 14);
+            label2.Size = new Size(226, 18);
             label2.TabIndex = 1;
-            label2.Text = "Enter your Username && Password and press the submit button.";
+            label2.Text = "ادخل اسم المستخدم وكلمة المرور للتسجيل";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Verdana", 14.25F, FontStyle.Bold);
-            label1.Location = new Point(12, 14);
+            label1.Font = new Font("HONOR Sans Arabic UI B", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(339, 10);
             label1.Name = "label1";
-            label1.Size = new Size(172, 23);
+            label1.Size = new Size(109, 22);
             label1.TabIndex = 0;
-            label1.Text = "Authentication";
+            label1.Text = "تسجيل الدخول";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(21, 79);
+            pictureBox1.Location = new Point(12, 75);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(159, 149);
+            pictureBox1.Size = new Size(150, 147);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -92,28 +92,28 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Verdana", 9F);
-            label3.Location = new Point(220, 82);
+            label3.Font = new Font("HONOR Sans Arabic UI R", 8.249999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(220, 76);
             label3.Name = "label3";
-            label3.Size = new Size(71, 14);
+            label3.Size = new Size(74, 15);
             label3.TabIndex = 2;
-            label3.Text = "Username";
+            label3.Text = "إسم المستخدم :";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Verdana", 9F);
-            label4.Location = new Point(220, 136);
+            label4.Font = new Font("HONOR Sans Arabic UI R", 8.249999F);
+            label4.Location = new Point(220, 130);
             label4.Name = "label4";
-            label4.Size = new Size(69, 14);
+            label4.Size = new Size(60, 15);
             label4.TabIndex = 3;
-            label4.Text = "Password";
+            label4.Text = "كلمة المرور :";
             // 
             // loginUsername
             // 
             loginUsername.BorderStyle = BorderStyle.FixedSingle;
-            loginUsername.Font = new Font("Verdana", 10F);
-            loginUsername.Location = new Point(220, 99);
+            loginUsername.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            loginUsername.Location = new Point(220, 97);
             loginUsername.Name = "loginUsername";
             loginUsername.Size = new Size(218, 24);
             loginUsername.TabIndex = 4;
@@ -121,8 +121,8 @@
             // loginPassword
             // 
             loginPassword.BorderStyle = BorderStyle.FixedSingle;
-            loginPassword.Font = new Font("Verdana", 10F);
-            loginPassword.Location = new Point(220, 153);
+            loginPassword.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            loginPassword.Location = new Point(220, 151);
             loginPassword.Name = "loginPassword";
             loginPassword.Size = new Size(218, 24);
             loginPassword.TabIndex = 5;
@@ -130,25 +130,23 @@
             // 
             // btnClose
             // 
-            btnClose.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            btnClose.Image = (Image)resources.GetObject("btnClose.Image");
-            btnClose.Location = new Point(332, 196);
+            btnClose.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            btnClose.Location = new Point(332, 185);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(106, 32);
+            btnClose.Size = new Size(106, 37);
             btnClose.TabIndex = 7;
-            btnClose.Text = "CLOSE";
+            btnClose.Text = "إغلاق";
             btnClose.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnClose.UseVisualStyleBackColor = true;
             // 
             // btnSubmit
             // 
-            btnSubmit.Font = new Font("Verdana", 8.25F, FontStyle.Bold);
-            btnSubmit.Image = (Image)resources.GetObject("btnSubmit.Image");
-            btnSubmit.Location = new Point(220, 196);
+            btnSubmit.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            btnSubmit.Location = new Point(220, 185);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(106, 32);
+            btnSubmit.Size = new Size(106, 37);
             btnSubmit.TabIndex = 8;
-            btnSubmit.Text = "SUBMIT";
+            btnSubmit.Text = "تسجيل دخول";
             btnSubmit.TextImageRelation = TextImageRelation.TextBeforeImage;
             btnSubmit.UseVisualStyleBackColor = true;
             // 
@@ -162,10 +160,10 @@
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 13F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(246, 246, 246);
-            ClientSize = new Size(460, 238);
+            ClientSize = new Size(460, 234);
             Controls.Add(btnSubmit);
             Controls.Add(btnClose);
             Controls.Add(loginPassword);
@@ -174,15 +172,16 @@
             Controls.Add(label3);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
-            Font = new Font("Verdana", 8.25F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "LoginForm";
+            RightToLeft = RightToLeft.Yes;
+            RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Authentication";
+            Text = "تسجيل الدخول";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

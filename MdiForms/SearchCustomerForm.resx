@@ -117,21 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAmVJREFUOE+N
-        zFtIk3EcxvF3EUQX0V3BMhKDEoK6iBUd7joRaghmVEbSYZpIRZloTJlCLs0alpsxtSXazKaRGFFNnVOW
-        mooiWeq2HDoPSzffnV7fve8OTzjKiz+kfW5/z/dHUX8USZ4fKCnW1pWpPnJPqwzeZ1VtbHlFS6Om+u3e
-        v5t/uid+lPmkUg9Nzyzq+mnU9jqg0Nsh01pQpNRDpWi8TjYrrqVIjz1W6WB0hNA84kRD3ww6zDSMNg/a
-        Jjwo75hHvrwVytL6U2QbkSYube6dZzGwwEFvodEz7cOXSRccwRB+MjzaLDQeNlshldb2k21ETp6KWwDw
-        fZHDqJuHycOh2+YBFwjDBcBgpaHu/oVsaZOvMFchJHsqO1fJBgFMejhMeHnMsDwsbh4Gqxu6cSc+jzmg
-        6XPivuwd7maUxJI9dfO23AcA7kAIi/4gJr08bEwQoy4WnVYX3nydQ+OwCxlZNY601AebyZ46eiS9ap5e
-        Wv4BJhCGnQ3A5OMwsMCgaXAWn0xeqNqnkBifX0+2EbG7kreJxcWRB8vs/hAsHh5DTj+G3IBuYgknLrxE
-        8eW4i2S7Ijr6zOHkc3nB/m9WsADmAJjDgLr1BxLOl0EuKcS0YivGCwRKsl0hFJ5etz0qTiYSXWlPSJIM
-        i/andsbEpEgK7shf2NUigGkHbcxBl5iqJts1DeZFmcO2V8DiB8xp4/H+kqCS3KyqIYEStFzdNOU33gBG
-        MjFbvRv1Zzeoyd2qKo5TgrqkjWPM6z2AYQu8NRQ0iQItuVuT8uT6Loecgq+SQkHcDpD3/yI7SLVkHRIy
-        O/fdSv8Nv46XnHfLbV4AAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="dgvID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgvName.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="customerSearchBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

@@ -41,20 +41,21 @@ namespace OpenGYM
             this.btnSearchCustomer.Click += BtnSearchCustomerClick;
             this.closeAllToolStripMenuItem.Click += CloseAllForms;
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
-            this.aboutToolStripMenuItem.Click += (s, e) => MessageBox.Show("OpenGYM - Gym Management System\nVersion 1.0\nDeveloped by Your Name", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.aboutToolStripMenuItem.Click += (s, e) => MessageBox.Show("OpenGYM - Gym Management System\nVersion 1.0\nDeveloped by Anas Yusuf.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.logoutToolStripMenuItem.Click += (s, e) =>
             {
                 this.Hide();
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();
             };
+            this.toolStripStatusLabel.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
         }
 
         private void loadUserData(User user)
         {
             this.currentUserName.Text = user.FullName;
             this.currentUserRole.Text = user.Role;
-            this.toolStripStatusLabel.Text = $"logged in as {user.Username}.";
+            this.toolStripStatusLabel.Text = $"المستخدم الحالي :  {user.Username} - ({user.Role})";
         }
 
         private void CloseAllForms(object? sender, EventArgs e)

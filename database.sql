@@ -47,6 +47,7 @@ CREATE TABLE Memberships (
 CREATE TABLE Payments (
     PaymentID INT PRIMARY KEY IDENTITY(1,1),
     CustomerID INT FOREIGN KEY REFERENCES Customers(CustomerID),
+    MembershipID INT FOREIGN KEY REFERENCES Memberships(MembershipID),
     Amount DECIMAL(10, 2),
     PaymentDate DATETIME DEFAULT GETDATE(),
     PaymentMethod NVARCHAR(50),
