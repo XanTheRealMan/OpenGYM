@@ -7,12 +7,12 @@
 This project is targeting .NET 8 and aims to provide a robust and efficient solution for managing gym subscriptions.
 
 ## Screenshots
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180455.png)
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180602.png)
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180745.png)
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180847.png)
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180950.png)
-![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_181031.png)
+![Screenshot](./screenshots/2025-06-08_180455.png)
+![Screenshot](./screenshots/2025-06-08_180602.png)
+![Screenshot](./screenshots/2025-06-08_180745.png)
+![Screenshot](./screenshots/2025-06-08_180847.png)
+![Screenshot](./screenshots/2025-06-08_180950.png)
+![Screenshot](./screenshots/2025-06-08_181031.png)
 
 ## License
 ```
