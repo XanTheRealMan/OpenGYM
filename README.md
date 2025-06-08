@@ -7,16 +7,20 @@
 This project is targeting .NET 8 and aims to provide a robust and efficient solution for managing gym subscriptions.
 
 ## Screenshots
-![Screenshot](https://github.com/iAintShowSpeed/OpenGYM/raw/refs/heads/master/screenshots/ss1.png)
-![Screenshot](https://github.com/iAintShowSpeed/OpenGYM/raw/refs/heads/master/screenshots/ss2.png)
-
-## Contributing
-We welcome contributions from everyone who supports the power of free and open-source software. To contribute:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
-3. Make your changes.
-4. Submit a pull request.
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180455.png)
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180602.png)
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180745.png)
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180847.png)
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_180950.png)
+![Screenshot](https://raw.githubusercontent.com/iAintShowSpeed/OpenGYM/refs/heads/master/screenshots/2025-06-08_181031.png)
 
 ## License
-This project is licensed under the GPL-v3 License. See the [LICENSE](LICENSE) file for more details.
+```
+Copyright (C) 2025  Anas Yusuf <me@anasov.ly>.
+
+This software is proprietary and is not free or open-source.
+It is a paid software, and any use, distribution, or modification without a valid license is strictly prohibited.
+Unauthorized use will result in legal action, including but not limited to lawsuits.  
+
+For licensing inquiries, please contact the software owner.
+```
