@@ -39,6 +39,7 @@ namespace OpenGYM
             this.btnNewCustomer.Click += BtnNewCustomerClick;
             this.btnNewSubscription.Click += BtnNewSubscriptionClick;
             this.btnSearchCustomer.Click += BtnSearchCustomerClick;
+            this.btnSubsRecord.Click += BtnSubsRecordClick;
             this.closeAllToolStripMenuItem.Click += CloseAllForms;
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
             this.aboutToolStripMenuItem.Click += (s, e) => MessageBox.Show("OpenGYM - Gym Management System\nVersion 1.0\nDeveloped by Anas Yusuf.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -49,6 +50,13 @@ namespace OpenGYM
                 loginForm.Show();
             };
             this.toolStripStatusLabel.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+        }
+
+        private void BtnSubsRecordClick(object? sender, EventArgs e)
+        {
+            SubscriptionRecordsForm newForm = new SubscriptionRecordsForm();
+            newForm.MdiParent = this;
+            newForm.Show();
         }
 
         private void loadUserData(User user)

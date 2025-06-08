@@ -32,7 +32,6 @@ namespace OpenGYM.Database
         private static readonly string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=OpenGYM;Integrated Security=True;TrustServerCertificate=True";
 
         // Get the last inserted IDs for Customers, Memberships, and Payments
-
         public static async Task<Customer> GetLastCustomerID()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -50,7 +49,6 @@ namespace OpenGYM.Database
             }
             return null;
         }
-
         public static async Task<Membership> GetLastMembershipID()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -68,7 +66,6 @@ namespace OpenGYM.Database
             }
             return null;
         }
-
         public static async Task<Payment> GetLastPaymentID()
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -136,7 +133,6 @@ namespace OpenGYM.Database
                 }
             }
         }
-
         public static async Task<List<CustomerSearch>> SearchCustomerByName(string Name)
         {
             List<CustomerSearch> customers = new List<CustomerSearch>();
@@ -162,8 +158,7 @@ namespace OpenGYM.Database
             }
             return customers;
         }
-
-        public static async Task<Customer> LoadCustomerByName(string FullName)
+        public static async Task<Customer> GetCustomerByName(string FullName)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -193,8 +188,7 @@ namespace OpenGYM.Database
             }
             return null;
         }
-
-        public static async Task<Customer> LoadCustomerByID(int CustomerID)
+        public static async Task<Customer> GetCustomerByID(int CustomerID)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -224,7 +218,6 @@ namespace OpenGYM.Database
             }
             return null;
         }
-
         public static async Task<Customer> SaveCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -254,7 +247,6 @@ namespace OpenGYM.Database
             }
             return customer;
         }
-
         public static async Task<Customer> EditCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -277,7 +269,6 @@ namespace OpenGYM.Database
             }
             return customer;
         }
-
         public static bool DeleteCustomer(Customer customer)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -294,8 +285,178 @@ namespace OpenGYM.Database
         }
 
         // membership functions
+        public static async Task<Membership> SaveMembership(Membership membership)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "INSERT INTO Memberships (CustomerID, StartDate, EndDate, IsActive) " +
+                               "OUTPUT INSERTED.MembershipID VALUES (@CustomerID, @StartDate, @EndDate, @IsActive)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CustomerID", membership.CustomerID);
+                    command.Parameters.AddWithValue("@StartDate", membership.StartDate);
+                    command.Parameters.AddWithValue("@EndDate", membership.EndDate);
+                    command.Parameters.AddWithValue("@IsActive", membership.IsActive);
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        membership.MembershipID = (int)result;
+                        membership.CreatedAt = DateTime.Now;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Failed to insert membership.");
+                    }
+                }
+            }
+            return membership;
+        }
+        public static async Task<Membership> GetMembershipByID(int MembershipID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT * FROM Memberships WHERE MembershipID = @MembershipID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MembershipID", MembershipID);
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            return new Membership
+                            {
+                                MembershipID = reader.GetInt32(reader.GetOrdinal("MembershipID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                StartDate = reader.GetDateTime(reader.GetOrdinal("StartDate")),
+                                EndDate = reader.GetDateTime(reader.GetOrdinal("EndDate")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"))
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+        public static async Task<List<Membership>> LoadMembershipsByCreateDate(DateTime date)
+        {
+            List<Membership> memberships = new List<Membership>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT * FROM Memberships WHERE CreatedAt >= @Date";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Date", date);
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            memberships.Add(new Membership
+                            {
+                                MembershipID = reader.GetInt32(reader.GetOrdinal("MembershipID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                StartDate = reader.GetDateTime(reader.GetOrdinal("StartDate")),
+                                EndDate = reader.GetDateTime(reader.GetOrdinal("EndDate")),
+                                IsActive = reader.GetBoolean(reader.GetOrdinal("IsActive"))
+                            });
+                        }
+                    }
+                }
+            }
+            return memberships;
+        }
 
         // payment functions
-
+        public static async Task<Payment> SavePayment(Payment payment)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "INSERT INTO Payments (CustomerID, MembershipID, Amount, PaymentMethod, Notes) " +
+                               "OUTPUT INSERTED.PaymentID VALUES (@CustomerID, @MembershipID, @Amount, @PaymentMethod, @Notes)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@CustomerID", payment.CustomerID);
+                    command.Parameters.AddWithValue("@MembershipID", payment.MembershipID);
+                    command.Parameters.AddWithValue("@Amount", payment.Amount);
+                    command.Parameters.AddWithValue("@PaymentMethod", payment.PaymentMethod);
+                    command.Parameters.AddWithValue("@Notes", payment.Notes);
+                    object result = await command.ExecuteScalarAsync();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        payment.PaymentID = (int)result;
+                        payment.CreatedAt = DateTime.Now;
+                    }
+                    else
+                    {
+                        throw new InvalidOperationException("Failed to insert payment.");
+                    }
+                }
+            }
+            return payment;
+        }
+        public static async Task<Payment> GetPaymentByID(int PaymentID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT * FROM Payments WHERE PaymentID = @PaymentID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PaymentID", PaymentID);
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            return new Payment
+                            {
+                                PaymentID = reader.GetInt32(reader.GetOrdinal("PaymentID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                MembershipID = reader.GetInt32(reader.GetOrdinal("MembershipID")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                Amount = reader.GetDecimal(reader.GetOrdinal("Amount")),
+                                PaymentMethod = reader.GetString(reader.GetOrdinal("PaymentMethod")),
+                                Notes = reader.GetString(reader.GetOrdinal("Notes"))
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+        public static async Task<List<Payment>> LoadPaymentsByCreateDate(DateTime date)
+        {
+            List<Payment> payments = new List<Payment>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT * FROM Payments WHERE CreatedAt >= @Date";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Date", date);
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            payments.Add(new Payment
+                            {
+                                PaymentID = reader.GetInt32(reader.GetOrdinal("PaymentID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                MembershipID = reader.GetInt32(reader.GetOrdinal("MembershipID")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                Amount = reader.GetDecimal(reader.GetOrdinal("Amount")),
+                                PaymentMethod = reader.GetString(reader.GetOrdinal("PaymentMethod")),
+                                Notes = reader.GetString(reader.GetOrdinal("Notes"))
+                            });
+                        }
+                    }
+                }
+            }
+            return payments;
+        }
     }
 }

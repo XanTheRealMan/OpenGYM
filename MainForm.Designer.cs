@@ -36,6 +36,10 @@
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             panel2 = new Panel();
+            btnSubsRecord = new Button();
+            panel5 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             btnNewCustomer = new Button();
             btnSearchCustomer = new Button();
             btnNewSubscription = new Button();
@@ -57,6 +61,7 @@
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
+            panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -94,7 +99,7 @@
             label2.Name = "label2";
             label2.Size = new Size(350, 18);
             label2.TabIndex = 2;
-            label2.Text = "open-source software to manage gym subscriptions";
+            label2.Text = "a lightweight software to manage gym subscriptions";
             // 
             // label1
             // 
@@ -129,6 +134,8 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(0, 122, 77);
+            panel2.Controls.Add(btnSubsRecord);
+            panel2.Controls.Add(panel5);
             panel2.Controls.Add(btnNewCustomer);
             panel2.Controls.Add(btnSearchCustomer);
             panel2.Controls.Add(btnNewSubscription);
@@ -142,6 +149,58 @@
             panel2.Size = new Size(274, 548);
             panel2.TabIndex = 1;
             // 
+            // btnSubsRecord
+            // 
+            btnSubsRecord.FlatStyle = FlatStyle.Flat;
+            btnSubsRecord.Font = new Font("HONOR Sans Arabic UI R", 10F);
+            btnSubsRecord.ForeColor = Color.White;
+            btnSubsRecord.Image = (Image)resources.GetObject("btnSubsRecord.Image");
+            btnSubsRecord.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSubsRecord.Location = new Point(12, 280);
+            btnSubsRecord.Name = "btnSubsRecord";
+            btnSubsRecord.Size = new Size(247, 45);
+            btnSubsRecord.TabIndex = 11;
+            btnSubsRecord.Text = "سجل الإشتراكات";
+            btnSubsRecord.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            panel5.Controls.Add(button2);
+            panel5.Controls.Add(button1);
+            panel5.Dock = DockStyle.Bottom;
+            panel5.Location = new Point(0, 428);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(274, 120);
+            panel5.TabIndex = 10;
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("HONOR Sans Arabic UI R", 10F);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(12, 64);
+            button2.Name = "button2";
+            button2.Size = new Size(247, 45);
+            button2.TabIndex = 9;
+            button2.Text = "إدارة الإشتراكات";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("HONOR Sans Arabic UI R", 10F);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(12, 13);
+            button1.Name = "button1";
+            button1.Size = new Size(247, 45);
+            button1.TabIndex = 8;
+            button1.Text = "إدارة الموظفين";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // btnNewCustomer
             // 
             btnNewCustomer.FlatStyle = FlatStyle.Flat;
@@ -149,7 +208,7 @@
             btnNewCustomer.ForeColor = Color.White;
             btnNewCustomer.Image = (Image)resources.GetObject("btnNewCustomer.Image");
             btnNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNewCustomer.Location = new Point(12, 149);
+            btnNewCustomer.Location = new Point(12, 127);
             btnNewCustomer.Name = "btnNewCustomer";
             btnNewCustomer.Size = new Size(247, 45);
             btnNewCustomer.TabIndex = 7;
@@ -163,7 +222,7 @@
             btnSearchCustomer.ForeColor = Color.White;
             btnSearchCustomer.Image = (Image)resources.GetObject("btnSearchCustomer.Image");
             btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearchCustomer.Location = new Point(12, 197);
+            btnSearchCustomer.Location = new Point(12, 178);
             btnSearchCustomer.Name = "btnSearchCustomer";
             btnSearchCustomer.Size = new Size(247, 45);
             btnSearchCustomer.TabIndex = 6;
@@ -177,7 +236,7 @@
             btnNewSubscription.ForeColor = Color.White;
             btnNewSubscription.Image = (Image)resources.GetObject("btnNewSubscription.Image");
             btnNewSubscription.ImageAlign = ContentAlignment.MiddleLeft;
-            btnNewSubscription.Location = new Point(12, 245);
+            btnNewSubscription.Location = new Point(12, 229);
             btnNewSubscription.Name = "btnNewSubscription";
             btnNewSubscription.Size = new Size(247, 45);
             btnNewSubscription.TabIndex = 4;
@@ -314,6 +373,7 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -349,5 +409,9 @@
         private Button btnNewCustomer;
         private ToolStripStatusLabel toolStripStatusLabel;
         private StatusStrip statusStrip1;
+        private Button button1;
+        private Button button2;
+        private Panel panel5;
+        private Button btnSubsRecord;
     }
 }

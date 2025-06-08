@@ -56,6 +56,7 @@ namespace OpenGYM.Database
     {
         public int MembershipID { get; set; }
         public int CustomerID { get; set; }
+        public DateTime CreatedAt { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public bool IsActive { get; set; }
@@ -66,8 +67,8 @@ namespace OpenGYM.Database
         public int PaymentID { get; set; }
         public int CustomerID { get; set; }
         public int MembershipID { get; set; }
+        public DateTime CreatedAt { get; set; }
         public decimal Amount { get; set; }
-        public DateTime PaymentDate { get; set; }
         public string PaymentMethod { get; set; }
         public string Notes { get; set; }
     }
