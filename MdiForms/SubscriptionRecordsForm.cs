@@ -23,7 +23,64 @@ namespace OpenGYM.MdiForms
             this.SubscriptionsTable.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             this.SubscriptionsTable.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             this.btnClose.Click += (s, e) => this.Close();
+            this.btnPrint.Click += BtnPrintClick;
             _ = LoadSubscriptions();
+        }
+
+        private async void BtnPrintClick(object? sender, EventArgs e)
+        {
+            try
+            {
+                if (this.SubscriptionsTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No subscriptions to print.", "Print", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (this.SubscriptionsTable.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Please select a subscription to print.", "Print", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var selectedRow = this.SubscriptionsTable.SelectedRows[0];
+
+                string? customerName = selectedRow.Cells[1].Value?.ToString();
+                if (string.IsNullOrEmpty(customerName))
+                {
+                    MessageBox.Show("Customer name is missing or invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Membership membership = await Connection.GetMembershipByID(
+                    Convert.ToInt32(selectedRow.Cells[0].Value)
+                );
+
+                Payment payment = await Connection.GetPaymentByMembershipID(
+                    Convert.ToInt32(selectedRow.Cells[0].Value)
+                );
+
+                InvoiceBuilder invoiceBuilder = new InvoiceBuilder(
+                    membership,
+                    payment,
+                    membership.CustomerID,
+                    customerName
+                );
+                try
+                {
+                    invoiceBuilder.GenerateInvoice();
+                    //invoiceBuilder.SaveInvoice();  
+                    invoiceBuilder.PreviewInvoice();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error generating invoice: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while printing: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task LoadSubscriptions()

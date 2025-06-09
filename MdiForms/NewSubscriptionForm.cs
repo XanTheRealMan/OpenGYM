@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace OpenGYM.MdiForms
     {
         private int subCustomerID = -1;
         private string subCustomerName = string.Empty;
+        private bool savedAlready = false;
+        private Membership? savedSubscription = null;
+        private Payment? savedPayment = null;
 
         public NewSubscriptionForm()
         {
@@ -23,6 +27,8 @@ namespace OpenGYM.MdiForms
             this.btnClose.Click += (s, e) => this.Close();
             this.btnSave.Click += (s, e) => this.SaveSubscription();
             this.btnSearchCustomer.Click += (s, e) => this.SearchCustomer();
+            this.btnClear.Click += BtnClearClick;
+            this.btnPrint.Click += BtnPrintClick;
             this.CustomerName.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -42,6 +48,52 @@ namespace OpenGYM.MdiForms
             this.PaymentMethod.SelectedIndex = 0;
             this.SubscriptionEndDate.Value = DateTime.Now.AddMonths(1);
             _ = SetNewMembershipIDAsync();
+        }
+
+        private void BtnPrintClick(object? sender, EventArgs e)
+        {
+            // print saved subscription details only
+            if (savedAlready && savedSubscription != null && savedPayment != null)
+            {
+                InvoiceBuilder invoiceBuilder = new InvoiceBuilder(
+                    savedSubscription,
+                    savedPayment,
+                    subCustomerID,
+                    subCustomerName
+                );
+                try
+                {
+                    invoiceBuilder.GenerateInvoice();
+                    //invoiceBuilder.SaveInvoice();
+                    invoiceBuilder.PreviewInvoice();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error generating invoice: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Save the subscription before printing.");
+            }
+        }
+
+        private void BtnClearClick(object? sender, EventArgs e)
+        {
+            // check if fields are empty, if not ask for confirmation
+            // check if subCustomerID is -1 or subCustomerName is empty
+            if (this.subCustomerID == -1 || string.IsNullOrEmpty(this.subCustomerName))
+            {
+                this.ClearFields();
+            }
+            else
+            {
+                var result = MessageBox.Show("Are you sure you want to clear the fields?", "Confirm Clear", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    this.ClearFields();
+                }
+            }
         }
 
         private async Task SetNewMembershipIDAsync()
@@ -115,6 +167,15 @@ namespace OpenGYM.MdiForms
                 return;
             }
 
+            if (this.savedAlready)
+            {
+                var result = MessageBox.Show("You have already saved this subscription. Do you want to save it again?", "Confirm Save", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
             Membership subscription = new Membership
             {
                 MembershipID = int.Parse(this.NewSubscriptionID.Text),
@@ -137,7 +198,14 @@ namespace OpenGYM.MdiForms
             payment = await Connection.SavePayment(payment);
 
             MessageBox.Show("New subscription added successfully!");
-            this.ClearFields();
+
+            this.savedSubscription = subscription;
+            this.savedPayment = payment;
+
+            this.savedAlready = true;
+            this.btnPrint.Enabled = true;
+
+            //this.ClearFields();
         }
 
         private string GetNotes()
@@ -163,11 +231,11 @@ namespace OpenGYM.MdiForms
             this.subCustomerID = -1;
             this.subCustomerName = string.Empty;
 
-            int newSubscriptionID;
-            if (int.TryParse(this.NewSubscriptionID.Text, out newSubscriptionID))
-            {
-                this.NewSubscriptionID.Text = (newSubscriptionID + 1).ToString();
-            }
+            this.savedAlready = false;
+            this.savedSubscription = null;
+            this.savedPayment = null;
+
+            _ = SetNewMembershipIDAsync();
         }
     }
 }

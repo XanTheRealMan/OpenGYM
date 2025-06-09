@@ -29,10 +29,20 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            label5 = new Label();
+            label3 = new Label();
             SubscriptionEndDate = new DateTimePicker();
             SubscriptionBeginDate = new DateTimePicker();
             panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            NewSubscriptionID = new TextBox();
+            label4 = new Label();
+            panel7 = new Panel();
+            label1 = new Label();
             groupBox3 = new GroupBox();
+            label7 = new Label();
+            label6 = new Label();
             PaymentTotal = new NumericUpDown();
             PaymentMethod = new ComboBox();
             Notes = new TextBox();
@@ -42,28 +52,19 @@
             btnClose = new Button();
             btnPrint = new Button();
             btnSave = new Button();
-            panel7 = new Panel();
-            label1 = new Label();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            NewSubscriptionID = new TextBox();
-            label4 = new Label();
             CustomerName = new TextBox();
             label2 = new Label();
-            label3 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
             btnSearchCustomer = new Button();
+            btnClear = new Button();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            panel7.SuspendLayout();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PaymentTotal).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
-            panel7.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
@@ -79,6 +80,26 @@
             groupBox1.TabIndex = 25;
             groupBox1.TabStop = false;
             groupBox1.Text = "مدة الإشتراك";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            label5.Location = new Point(198, 53);
+            label5.Name = "label5";
+            label5.Size = new Size(68, 17);
+            label5.TabIndex = 34;
+            label5.Text = "تاريخ الإنتهاء :";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            label3.Location = new Point(198, 25);
+            label3.Name = "label3";
+            label3.Size = new Size(63, 17);
+            label3.TabIndex = 33;
+            label3.Text = "تاريخ البدئ :";
             // 
             // SubscriptionEndDate
             // 
@@ -111,6 +132,64 @@
             panel1.Size = new Size(592, 70);
             panel1.TabIndex = 20;
             // 
+            // panel2
+            // 
+            panel2.Controls.Add(panel3);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(121, 70);
+            panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(NewSubscriptionID);
+            panel3.Controls.Add(label4);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(121, 47);
+            panel3.TabIndex = 2;
+            // 
+            // NewSubscriptionID
+            // 
+            NewSubscriptionID.BorderStyle = BorderStyle.FixedSingle;
+            NewSubscriptionID.Enabled = false;
+            NewSubscriptionID.Location = new Point(12, 10);
+            NewSubscriptionID.Name = "NewSubscriptionID";
+            NewSubscriptionID.Size = new Size(70, 23);
+            NewSubscriptionID.TabIndex = 15;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            label4.Location = new Point(88, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(30, 17);
+            label4.TabIndex = 14;
+            label4.Text = "رقم :";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(label1);
+            panel7.Dock = DockStyle.Right;
+            panel7.Location = new Point(439, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(153, 70);
+            panel7.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("HONOR Sans Arabic UI B", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(10, 20);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.Yes;
+            label1.Size = new Size(131, 30);
+            label1.TabIndex = 2;
+            label1.Text = "إشتراك جديد";
+            // 
             // groupBox3
             // 
             groupBox3.Controls.Add(label7);
@@ -124,6 +203,26 @@
             groupBox3.TabIndex = 28;
             groupBox3.TabStop = false;
             groupBox3.Text = "الدفع";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            label7.Location = new Point(183, 58);
+            label7.Name = "label7";
+            label7.Size = new Size(88, 17);
+            label7.TabIndex = 35;
+            label7.Text = "القيمة المستحقة :";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            label6.Location = new Point(206, 27);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 17);
+            label6.TabIndex = 34;
+            label6.Text = "طريقة الدفع :";
             // 
             // PaymentTotal
             // 
@@ -176,13 +275,14 @@
             // 
             // panel5
             // 
+            panel5.Controls.Add(btnClear);
             panel5.Controls.Add(btnClose);
             panel5.Controls.Add(btnPrint);
             panel5.Controls.Add(btnSave);
             panel5.Dock = DockStyle.Left;
             panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(251, 54);
+            panel5.Size = new Size(336, 54);
             panel5.TabIndex = 0;
             // 
             // btnClose
@@ -199,7 +299,7 @@
             // 
             btnPrint.Enabled = false;
             btnPrint.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            btnPrint.Location = new Point(89, 9);
+            btnPrint.Location = new Point(170, 9);
             btnPrint.Name = "btnPrint";
             btnPrint.Size = new Size(75, 33);
             btnPrint.TabIndex = 3;
@@ -209,70 +309,12 @@
             // btnSave
             // 
             btnSave.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            btnSave.Location = new Point(170, 9);
+            btnSave.Location = new Point(251, 9);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 33);
             btnSave.TabIndex = 4;
             btnSave.Text = "تسجيل";
             btnSave.UseVisualStyleBackColor = true;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(label1);
-            panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(439, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(153, 70);
-            panel7.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("HONOR Sans Arabic UI B", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(10, 20);
-            label1.Name = "label1";
-            label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(131, 30);
-            label1.TabIndex = 2;
-            label1.Text = "إشتراك جديد";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(panel3);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(121, 70);
-            panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            panel3.Controls.Add(NewSubscriptionID);
-            panel3.Controls.Add(label4);
-            panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(121, 47);
-            panel3.TabIndex = 2;
-            // 
-            // NewSubscriptionID
-            // 
-            NewSubscriptionID.BorderStyle = BorderStyle.FixedSingle;
-            NewSubscriptionID.Enabled = false;
-            NewSubscriptionID.Location = new Point(12, 10);
-            NewSubscriptionID.Name = "NewSubscriptionID";
-            NewSubscriptionID.Size = new Size(70, 23);
-            NewSubscriptionID.TabIndex = 15;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            label4.Location = new Point(88, 15);
-            label4.Name = "label4";
-            label4.Size = new Size(30, 17);
-            label4.TabIndex = 14;
-            label4.Text = "رقم :";
             // 
             // CustomerName
             // 
@@ -293,46 +335,6 @@
             label2.TabIndex = 32;
             label2.Text = "العميل :";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            label3.Location = new Point(198, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(63, 17);
-            label3.TabIndex = 33;
-            label3.Text = "تاريخ البدئ :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            label5.Location = new Point(198, 53);
-            label5.Name = "label5";
-            label5.Size = new Size(68, 17);
-            label5.TabIndex = 34;
-            label5.Text = "تاريخ الإنتهاء :";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            label6.Location = new Point(206, 27);
-            label6.Name = "label6";
-            label6.Size = new Size(65, 17);
-            label6.TabIndex = 34;
-            label6.Text = "طريقة الدفع :";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            label7.Location = new Point(183, 58);
-            label7.Name = "label7";
-            label7.Size = new Size(88, 17);
-            label7.TabIndex = 35;
-            label7.Text = "القيمة المستحقة :";
-            // 
             // btnSearchCustomer
             // 
             btnSearchCustomer.Font = new Font("HONOR Sans Arabic UI R", 9F);
@@ -342,6 +344,16 @@
             btnSearchCustomer.TabIndex = 33;
             btnSearchCustomer.Text = "بحث";
             btnSearchCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            btnClear.Location = new Point(89, 9);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 33);
+            btnClear.TabIndex = 32;
+            btnClear.Text = "جديد";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // NewSubscriptionForm
             // 
@@ -366,16 +378,16 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PaymentTotal).EndInit();
             panel4.ResumeLayout(false);
             panel5.ResumeLayout(false);
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -408,5 +420,6 @@
         private Label label7;
         private Label label6;
         private Button btnSearchCustomer;
+        private Button btnClear;
     }
 }

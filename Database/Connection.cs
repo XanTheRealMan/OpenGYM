@@ -428,6 +428,35 @@ namespace OpenGYM.Database
             }
             return null;
         }
+        public static async Task<Payment> GetPaymentByMembershipID(int MembershipID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                await connection.OpenAsync();
+                string query = "SELECT * FROM Payments WHERE MembershipID = @MembershipID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@MembershipID", MembershipID);
+                    using (SqlDataReader reader = await command.ExecuteReaderAsync())
+                    {
+                        if (await reader.ReadAsync())
+                        {
+                            return new Payment
+                            {
+                                PaymentID = reader.GetInt32(reader.GetOrdinal("PaymentID")),
+                                CustomerID = reader.GetInt32(reader.GetOrdinal("CustomerID")),
+                                MembershipID = reader.GetInt32(reader.GetOrdinal("MembershipID")),
+                                CreatedAt = reader.GetDateTime(reader.GetOrdinal("CreatedAt")),
+                                Amount = reader.GetDecimal(reader.GetOrdinal("Amount")),
+                                PaymentMethod = reader.GetString(reader.GetOrdinal("PaymentMethod")),
+                                Notes = reader.GetString(reader.GetOrdinal("Notes"))
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
         public static async Task<List<Payment>> LoadPaymentsByCreateDate(DateTime date)
         {
             List<Payment> payments = new List<Payment>();
