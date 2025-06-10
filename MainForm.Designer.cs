@@ -319,7 +319,7 @@
             // closeAllToolStripMenuItem
             // 
             closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            closeAllToolStripMenuItem.Size = new Size(124, 22);
+            closeAllToolStripMenuItem.Size = new Size(180, 22);
             closeAllToolStripMenuItem.Text = "إغلاق الكل";
             // 
             // helpToolStripMenuItem
@@ -332,7 +332,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(130, 22);
+            aboutToolStripMenuItem.Size = new Size(180, 22);
             aboutToolStripMenuItem.Text = "عن التطبيق";
             // 
             // toolStripStatusLabel
