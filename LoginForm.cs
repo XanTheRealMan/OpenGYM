@@ -1,19 +1,11 @@
 /*
- * This file is part of OpenGYM.
- * Copyright (C) 2025  Anas Yusuf <itz.anasov@gmail.com>.
- *
- * OpenGYM is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * OpenGYM is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with OpenGYM. If not, see <https://www.gnu.org/licenses/>.
+ * Copyright (C) 2025  Anas Yusuf <me@anasov.ly>.
+ * 
+ * This software is proprietary and is not free or open-source.
+ * It is a paid software, and any use, distribution, or modification without a valid license is strictly prohibited.
+ * Unauthorized use will result in legal action, including but not limited to lawsuits.  
+ * 
+ * For licensing inquiries, please contact the software owner.
  */
 
 using Microsoft.VisualBasic.ApplicationServices;

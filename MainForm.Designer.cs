@@ -38,8 +38,8 @@
             panel2 = new Panel();
             btnSubsRecord = new Button();
             panel5 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
+            btnManageSubscriptions = new Button();
+            btnManageUsers = new Button();
             btnNewCustomer = new Button();
             btnSearchCustomer = new Button();
             btnNewSubscription = new Button();
@@ -165,41 +165,41 @@
             // 
             // panel5
             // 
-            panel5.Controls.Add(button2);
-            panel5.Controls.Add(button1);
+            panel5.Controls.Add(btnManageSubscriptions);
+            panel5.Controls.Add(btnManageUsers);
             panel5.Dock = DockStyle.Bottom;
             panel5.Location = new Point(0, 428);
             panel5.Name = "panel5";
             panel5.Size = new Size(274, 120);
             panel5.TabIndex = 10;
             // 
-            // button2
+            // btnManageSubscriptions
             // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("HONOR Sans Arabic UI R", 10F);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(12, 64);
-            button2.Name = "button2";
-            button2.Size = new Size(247, 45);
-            button2.TabIndex = 9;
-            button2.Text = "إدارة الإشتراكات";
-            button2.UseVisualStyleBackColor = true;
+            btnManageSubscriptions.FlatStyle = FlatStyle.Flat;
+            btnManageSubscriptions.Font = new Font("HONOR Sans Arabic UI R", 10F);
+            btnManageSubscriptions.ForeColor = Color.White;
+            btnManageSubscriptions.Image = (Image)resources.GetObject("btnManageSubscriptions.Image");
+            btnManageSubscriptions.ImageAlign = ContentAlignment.MiddleLeft;
+            btnManageSubscriptions.Location = new Point(12, 64);
+            btnManageSubscriptions.Name = "btnManageSubscriptions";
+            btnManageSubscriptions.Size = new Size(247, 45);
+            btnManageSubscriptions.TabIndex = 9;
+            btnManageSubscriptions.Text = "إدارة الإشتراكات";
+            btnManageSubscriptions.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnManageUsers
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("HONOR Sans Arabic UI R", 10F);
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(12, 13);
-            button1.Name = "button1";
-            button1.Size = new Size(247, 45);
-            button1.TabIndex = 8;
-            button1.Text = "إدارة الموظفين";
-            button1.UseVisualStyleBackColor = true;
+            btnManageUsers.FlatStyle = FlatStyle.Flat;
+            btnManageUsers.Font = new Font("HONOR Sans Arabic UI R", 10F);
+            btnManageUsers.ForeColor = Color.White;
+            btnManageUsers.Image = (Image)resources.GetObject("btnManageUsers.Image");
+            btnManageUsers.ImageAlign = ContentAlignment.MiddleLeft;
+            btnManageUsers.Location = new Point(12, 13);
+            btnManageUsers.Name = "btnManageUsers";
+            btnManageUsers.Size = new Size(247, 45);
+            btnManageUsers.TabIndex = 8;
+            btnManageUsers.Text = "إدارة الموظفين";
+            btnManageUsers.UseVisualStyleBackColor = true;
             // 
             // btnNewCustomer
             // 
@@ -409,8 +409,8 @@
         private Button btnNewCustomer;
         private ToolStripStatusLabel toolStripStatusLabel;
         private StatusStrip statusStrip1;
-        private Button button1;
-        private Button button2;
+        private Button btnManageUsers;
+        private Button btnManageSubscriptions;
         private Panel panel5;
         private Button btnSubsRecord;
     }

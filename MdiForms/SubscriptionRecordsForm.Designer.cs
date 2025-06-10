@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             customerSearchBindingSource = new BindingSource(components);
             panel5 = new Panel();
             SubscriptionsTable = new DataGridView();
@@ -49,8 +49,8 @@
             panel1 = new Panel();
             panel4 = new Panel();
             panel6 = new Panel();
-            btnClose = new Button();
             btnPrint = new Button();
+            btnClose = new Button();
             ((System.ComponentModel.ISupportInitialize)customerSearchBindingSource).BeginInit();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SubscriptionsTable).BeginInit();
@@ -81,28 +81,28 @@
             SubscriptionsTable.AllowUserToDeleteRows = false;
             SubscriptionsTable.AllowUserToResizeColumns = false;
             SubscriptionsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new Font("HONOR Sans Arabic UI R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SubscriptionsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new Font("HONOR Sans Arabic UI R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SubscriptionsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             SubscriptionsTable.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             SubscriptionsTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            SubscriptionsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            SubscriptionsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             SubscriptionsTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             SubscriptionsTable.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName, dgvDateBegin, dgvDateEnd, dgvPayment, dgvNotes });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            SubscriptionsTable.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            SubscriptionsTable.DefaultCellStyle = dataGridViewCellStyle3;
             SubscriptionsTable.Dock = DockStyle.Fill;
             SubscriptionsTable.EditMode = DataGridViewEditMode.EditProgrammatically;
             SubscriptionsTable.Location = new Point(13, 13);
@@ -111,19 +111,19 @@
             SubscriptionsTable.ReadOnly = true;
             SubscriptionsTable.RightToLeft = RightToLeft.Yes;
             SubscriptionsTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            SubscriptionsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            SubscriptionsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             SubscriptionsTable.RowHeadersWidth = 20;
             SubscriptionsTable.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            SubscriptionsTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            SubscriptionsTable.ScrollBars = ScrollBars.None;
+            dataGridViewCellStyle5.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            SubscriptionsTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            SubscriptionsTable.ScrollBars = ScrollBars.Vertical;
             SubscriptionsTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             SubscriptionsTable.ShowCellErrors = false;
             SubscriptionsTable.ShowCellToolTips = false;
@@ -235,17 +235,6 @@
             panel6.Size = new Size(178, 54);
             panel6.TabIndex = 1;
             // 
-            // btnClose
-            // 
-            btnClose.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnClose.Location = new Point(11, 12);
-            btnClose.Name = "btnClose";
-            btnClose.RightToLeft = RightToLeft.Yes;
-            btnClose.Size = new Size(75, 30);
-            btnClose.TabIndex = 0;
-            btnClose.Text = "إغلاق";
-            btnClose.UseVisualStyleBackColor = true;
-            // 
             // btnPrint
             // 
             btnPrint.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -256,6 +245,17 @@
             btnPrint.TabIndex = 1;
             btnPrint.Text = "طباعة";
             btnPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            btnClose.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnClose.Location = new Point(11, 12);
+            btnClose.Name = "btnClose";
+            btnClose.RightToLeft = RightToLeft.Yes;
+            btnClose.Size = new Size(75, 30);
+            btnClose.TabIndex = 0;
+            btnClose.Text = "إغلاق";
+            btnClose.UseVisualStyleBackColor = true;
             // 
             // SubscriptionRecordsForm
             // 

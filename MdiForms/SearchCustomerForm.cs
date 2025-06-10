@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * Copyright (C) 2025  Anas Yusuf <me@anasov.ly>.
+ * 
+ * This software is proprietary and is not free or open-source.
+ * It is a paid software, and any use, distribution, or modification without a valid license is strictly prohibited.
+ * Unauthorized use will result in legal action, including but not limited to lawsuits.  
+ * 
+ * For licensing inquiries, please contact the software owner.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +28,7 @@ namespace OpenGYM.MdiForms
             InitializeComponent();
             this.CustomersTable.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             this.CustomersTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            this.CustomersTable.MouseClick += CustomersTableMouseClick;
             this.CustomerName.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -28,6 +39,45 @@ namespace OpenGYM.MdiForms
             };
             this.btnClose.Click += (s, e) => this.Close();
             this.btnSearch.Click += SearchCustomer;
+        }
+
+        private void CustomersTableMouseClick(object? sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                int currentMouseOverRow = this.CustomersTable.HitTest(e.X, e.Y).RowIndex;
+                if (this.CustomersTable.SelectedRows.Count > 0 && currentMouseOverRow >= 0)
+                {
+                    ContextMenuStrip m = new ContextMenuStrip();
+                    m.Items.Add("عرض سجل الإشتراكات");
+                    //m.Items.Add("تعديل البيانات");
+
+                    m.Show(this.CustomersTable, new Point(e.X, e.Y));
+
+                    m.ItemClicked += async (object? sender, ToolStripItemClickedEventArgs e) =>
+                    {
+                        if (e.ClickedItem.Text == "عرض سجل الإشتراكات")
+                        {
+                            if (this.CustomersTable.SelectedRows.Count > 0)
+                            {
+                                int customerId = Convert.ToInt32(this.CustomersTable.SelectedRows[0].Cells[0].Value);
+                                Customer c = await Connection.GetCustomerByID(customerId);
+                                SubscriptionRecordsForm form = new SubscriptionRecordsForm(c);
+                                form.ShowDialog();
+                            }
+                        }
+                        //else if (e.ClickedItem.Text == "تعديل البيانات")
+                        //{
+                        //    if (this.CustomersTable.SelectedRows.Count > 0)
+                        //    {
+                        //        int customerId = Convert.ToInt32(this.CustomersTable.SelectedRows[0].Cells[0].Value);
+                        //        CustomerEditForm form = new CustomerEditForm(customerId);
+                        //        form.ShowDialog();
+                        //    }
+                        //}
+                    };
+                }
+            }
         }
 
         private async void SearchCustomer(object? sender, EventArgs e)

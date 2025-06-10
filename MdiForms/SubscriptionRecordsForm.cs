@@ -1,4 +1,14 @@
-﻿using System;
+﻿/*
+ * Copyright (C) 2025  Anas Yusuf <me@anasov.ly>.
+ * 
+ * This software is proprietary and is not free or open-source.
+ * It is a paid software, and any use, distribution, or modification without a valid license is strictly prohibited.
+ * Unauthorized use will result in legal action, including but not limited to lawsuits.  
+ * 
+ * For licensing inquiries, please contact the software owner.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +23,12 @@ namespace OpenGYM.MdiForms
 {
     public partial class SubscriptionRecordsForm : Form
     {
-        public SubscriptionRecordsForm()
+        Customer? _customer = null;
+
+        public SubscriptionRecordsForm(Customer? customer = null)
         {
             InitializeComponent();
+            this._customer = customer;
             this.SubscriptionsTable.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             this.SubscriptionsTable.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             this.SubscriptionsTable.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -87,7 +100,15 @@ namespace OpenGYM.MdiForms
         {
             try
             {
-                var payments = await Connection.LoadPaymentsByCreateDate(DateTime.Today);
+                List<Payment> payments;
+                if(this._customer != null)
+                {
+                    payments = await Connection.LoadPaymentsByCustomerID(this._customer.CustomerID);
+                }
+                else
+                {
+                    payments = await Connection.LoadPaymentsByCreateDate(DateTime.Today);
+                }
                 if (payments.Count == 0)
                 {
                     MessageBox.Show("No subscriptions found.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
