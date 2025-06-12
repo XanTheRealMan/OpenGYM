@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panel5 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
@@ -50,13 +51,12 @@
             CustomerGender = new ComboBox();
             label8 = new Label();
             CustomerBirthDate = new DateTimePicker();
-            panel5 = new Panel();
             panel1.SuspendLayout();
+            panel5.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
-            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -70,16 +70,26 @@
             panel1.Size = new Size(592, 70);
             panel1.TabIndex = 9;
             // 
+            // panel5
+            // 
+            panel5.Controls.Add(label1);
+            panel5.Dock = DockStyle.Right;
+            panel5.Location = new Point(241, 0);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(351, 70);
+            panel5.TabIndex = 3;
+            // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("HONOR Sans Arabic UI B", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(9, 17);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(182, 30);
+            label1.Size = new Size(351, 70);
             label1.TabIndex = 2;
             label1.Text = "تسجيل عميل جديد";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -273,15 +283,6 @@
             CustomerBirthDate.Size = new Size(200, 23);
             CustomerBirthDate.TabIndex = 27;
             // 
-            // panel5
-            // 
-            panel5.Controls.Add(label1);
-            panel5.Dock = DockStyle.Right;
-            panel5.Location = new Point(389, 0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(203, 70);
-            panel5.TabIndex = 3;
-            // 
             // NewCustomerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -308,13 +309,12 @@
             ShowIcon = false;
             Text = "تسجيل عميل جديد";
             panel1.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

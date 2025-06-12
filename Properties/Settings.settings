@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OpenGYM.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GymName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">نادي اوبن جيم الرياضي</Value>
+    </Setting>
+    <Setting Name="GymDirection" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">بنغازي,ليبيا</Value>
+    </Setting>
+    <Setting Name="GymInvoiceNote1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">* يمنع سحب القيمة أو إيقاف الإشتراك</Value>
+    </Setting>
+    <Setting Name="GymInvoiceNote2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">* الحذاء المخصص للنادي إجباري</Value>
+    </Setting>
+    <Setting Name="GymInvoiceNote3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">* يمنع الجري على السير</Value>
+    </Setting>
+    <Setting Name="GymInvoiceNote4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">* عدم إصطحاب الأطفال والاصدقاء</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

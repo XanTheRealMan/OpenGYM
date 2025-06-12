@@ -62,8 +62,10 @@ namespace OpenGYM.MdiForms
                             {
                                 int customerId = Convert.ToInt32(this.CustomersTable.SelectedRows[0].Cells[0].Value);
                                 Customer c = await Connection.GetCustomerByID(customerId);
-                                SubscriptionRecordsForm form = new SubscriptionRecordsForm(c);
-                                form.ShowDialog();
+
+                                SubscriptionRecordsForm newform = new SubscriptionRecordsForm(c);
+                                newform.MdiParent = this.MdiParent;
+                                newform.Show();
                             }
                         }
                         //else if (e.ClickedItem.Text == "تعديل البيانات")

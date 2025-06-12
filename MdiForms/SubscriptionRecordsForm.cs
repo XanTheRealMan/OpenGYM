@@ -38,6 +38,7 @@ namespace OpenGYM.MdiForms
             this.btnClose.Click += (s, e) => this.Close();
             this.btnPrint.Click += BtnPrintClick;
             _ = LoadSubscriptions();
+            setTitle();
         }
 
         private async void BtnPrintClick(object? sender, EventArgs e)
@@ -93,6 +94,18 @@ namespace OpenGYM.MdiForms
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred while printing: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void setTitle()
+        {
+            if (this._customer != null)
+            {
+                this.title.Text = $"سجل إشتراكات ({this._customer.FullName})";
+            }
+            else
+            {
+                this.title.Text = "سجل الإشتراكات (اليوم)";
             }
         }
 

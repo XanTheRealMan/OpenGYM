@@ -7,13 +7,21 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>OpenGYM</Title>
-    <Description>open-source software to manage gym subscriptions.</Description>
+    <Description>a lightweight software to manage gym subscriptions.</Description>
     <PackageProjectUrl>https://github.com/iAintShowSpeed/OpenGYM</PackageProjectUrl>
     <PackageIcon>logo-128x128.png</PackageIcon>
     <RepositoryUrl>https://github.com/iAintShowSpeed/OpenGYM</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>foss,gym,csharp</PackageTags>
+    <StartupObject>OpenGYM.Program</StartupObject>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+    <Copyright>Copyright (C) 2025  Anas Yusuf &lt;me@anasov.ly&gt;</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
@@ -26,6 +34,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -36,6 +49,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Resources\logo-128x128.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

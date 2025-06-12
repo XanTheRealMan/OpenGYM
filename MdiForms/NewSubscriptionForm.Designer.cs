@@ -49,13 +49,13 @@
             label8 = new Label();
             panel4 = new Panel();
             panel5 = new Panel();
+            btnClear = new Button();
             btnClose = new Button();
             btnPrint = new Button();
             btnSave = new Button();
             CustomerName = new TextBox();
             label2 = new Label();
             btnSearchCustomer = new Button();
-            btnClear = new Button();
             groupBox1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -174,21 +174,22 @@
             // 
             panel7.Controls.Add(label1);
             panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(439, 0);
+            panel7.Location = new Point(303, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(153, 70);
+            panel7.Size = new Size(289, 70);
             panel7.TabIndex = 4;
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("HONOR Sans Arabic UI B", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(10, 20);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(131, 30);
+            label1.Size = new Size(289, 70);
             label1.TabIndex = 2;
             label1.Text = "إشتراك جديد";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // groupBox3
             // 
@@ -285,6 +286,16 @@
             panel5.Size = new Size(336, 54);
             panel5.TabIndex = 0;
             // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("HONOR Sans Arabic UI R", 9F);
+            btnClear.Location = new Point(89, 9);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 33);
+            btnClear.TabIndex = 32;
+            btnClear.Text = "جديد";
+            btnClear.UseVisualStyleBackColor = true;
+            // 
             // btnClose
             // 
             btnClose.Font = new Font("HONOR Sans Arabic UI R", 9F);
@@ -345,16 +356,6 @@
             btnSearchCustomer.Text = "بحث";
             btnSearchCustomer.UseVisualStyleBackColor = true;
             // 
-            // btnClear
-            // 
-            btnClear.Font = new Font("HONOR Sans Arabic UI R", 9F);
-            btnClear.Location = new Point(89, 9);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(75, 33);
-            btnClear.TabIndex = 32;
-            btnClear.Text = "جديد";
-            btnClear.UseVisualStyleBackColor = true;
-            // 
             // NewSubscriptionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -382,7 +383,6 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel7.ResumeLayout(false);
-            panel7.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PaymentTotal).EndInit();

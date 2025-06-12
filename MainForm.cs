@@ -34,6 +34,7 @@ namespace OpenGYM
             this.btnSubsRecord.Click += BtnSubsRecordClick;
             this.closeAllToolStripMenuItem.Click += CloseAllForms;
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
+            this.FormClosed += (s, e) => Application.Exit();
             this.aboutToolStripMenuItem.Click += (s, e) => MessageBox.Show("OpenGYM - Gym Management System\nVersion 1.0\nDeveloped by Anas Yusuf.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.logoutToolStripMenuItem.Click += (s, e) =>
             {

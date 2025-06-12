@@ -54,3 +54,11 @@ CREATE TABLE Payments (
     PaymentMethod NVARCHAR(50),
     Notes NVARCHAR(255)
 );
+
+-- Settings
+CREATE TABLE Settings (
+    SettingID INT PRIMARY KEY IDENTITY(1,1),
+    SettingName NVARCHAR(100) UNIQUE,
+    SettingValue NVARCHAR(255),
+    CreatedAt DATETIME DEFAULT GETDATE()
+);

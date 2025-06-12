@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             btnClose = new Button();
             panel6 = new Panel();
             panel4 = new Panel();
@@ -127,22 +127,23 @@
             // 
             panel7.Controls.Add(label1);
             panel7.Dock = DockStyle.Right;
-            panel7.Location = new Point(526, 0);
+            panel7.Location = new Point(300, 0);
             panel7.Name = "panel7";
             panel7.RightToLeft = RightToLeft.Yes;
-            panel7.Size = new Size(159, 69);
+            panel7.Size = new Size(385, 69);
             panel7.TabIndex = 1;
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("HONOR Sans Arabic UI B", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(3, 18);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
             label1.RightToLeft = RightToLeft.Yes;
-            label1.Size = new Size(154, 30);
+            label1.Size = new Size(385, 69);
             label1.TabIndex = 0;
             label1.Text = "البحث عن عميل";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // CustomersTable
             // 
@@ -150,28 +151,28 @@
             CustomersTable.AllowUserToDeleteRows = false;
             CustomersTable.AllowUserToResizeColumns = false;
             CustomersTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.Font = new Font("HONOR Sans Arabic UI R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CustomersTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Font = new Font("HONOR Sans Arabic UI R", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CustomersTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             CustomersTable.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             CustomersTable.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            CustomersTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("HONOR Sans Arabic UI R", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            CustomersTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             CustomersTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CustomersTable.Columns.AddRange(new DataGridViewColumn[] { dgvID, dgvName });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = SystemColors.Window;
-            dataGridViewCellStyle8.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            CustomersTable.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            CustomersTable.DefaultCellStyle = dataGridViewCellStyle3;
             CustomersTable.Dock = DockStyle.Fill;
             CustomersTable.EditMode = DataGridViewEditMode.EditProgrammatically;
             CustomersTable.Location = new Point(13, 0);
@@ -180,18 +181,18 @@
             CustomersTable.ReadOnly = true;
             CustomersTable.RightToLeft = RightToLeft.Yes;
             CustomersTable.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.Control;
-            dataGridViewCellStyle9.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            CustomersTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            CustomersTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             CustomersTable.RowHeadersWidth = 20;
             CustomersTable.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
-            CustomersTable.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Font = new Font("HONOR Sans Arabic UI R", 9.75F);
+            CustomersTable.RowsDefaultCellStyle = dataGridViewCellStyle5;
             CustomersTable.ScrollBars = ScrollBars.None;
             CustomersTable.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CustomersTable.ShowCellErrors = false;
@@ -313,7 +314,6 @@
             panel4.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel7.ResumeLayout(false);
-            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CustomersTable).EndInit();
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);

@@ -64,4 +64,5 @@ namespace OpenGYM.Database
         public string PaymentMethod { get; set; }
         public string Notes { get; set; }
     }
+
 }

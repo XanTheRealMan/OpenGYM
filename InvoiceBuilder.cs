@@ -22,6 +22,8 @@ using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using System.IO;
 using System.Data.Common;
+using QuestPDF;
+using System.Configuration;
 
 
 namespace OpenGYM
@@ -44,7 +46,7 @@ namespace OpenGYM
             QuestPDF.Settings.License = LicenseType.Community;
         }
 
-        public void GenerateInvoice()
+        public async void GenerateInvoice()
         {
             if (_membership == null || _payment == null || _customerID < 0 || string.IsNullOrEmpty(_customerName))
             {
@@ -63,13 +65,15 @@ namespace OpenGYM
                     {
                         container.Column(col =>
                         {
-
+                            // TODO: fix this
                             col.Item().Row(row =>
                             {
                                 row.RelativeItem(2).Column(col =>
                                 {
-                                    col.Item().Text($"نادي سلطان الرياضي").FontSize(14).Bold();
-                                    col.Item().Text($"بنغازي - أرض بن علي").FontSize(12);
+                                    col.Item().Text(Properties.Settings.Default.GymName).FontSize(14).Bold();
+                                    col.Item().Text(Properties.Settings.Default.GymDirection).FontSize(12);
+                                    //col.Item().Text(invoiceTitle.SettingValue).FontSize(14).Bold();
+                                    //col.Item().Text(invoiceSubtitle.SettingValue).FontSize(12);
                                 });
 
                                 row.RelativeItem().Column(col =>
@@ -140,23 +144,27 @@ namespace OpenGYM
 
                                 row.RelativeItem().Column(col =>
                                 {
-                                    col.Item().Text("* يمنع سحب القيمة أو إيقاف الإشتراك").FontSize(8);
-                                    col.Item().Text("* الحذاء المخصص للنادي إجباري").FontSize(8);
+                                    col.Item().Text(Properties.Settings.Default.GymInvoiceNote1).FontSize(8);
+                                    col.Item().Text(Properties.Settings.Default.GymInvoiceNote2).FontSize(8);
+                                    //col.Item().Text("* يمنع سحب القيمة أو إيقاف الإشتراك").FontSize(8);
+                                    //col.Item().Text("* الحذاء المخصص للنادي إجباري").FontSize(8);
                                 });
 
                                 row.RelativeItem().Column(col =>
                                 {
-                                    col.Item().Text("* يمنع الجري على السير").FontSize(8);
-                                    col.Item().Text("* عدم إصطحاب الأطفال والاصدقاء").FontSize(8);
+                                    col.Item().Text(Properties.Settings.Default.GymInvoiceNote3).FontSize(8);
+                                    col.Item().Text(Properties.Settings.Default.GymInvoiceNote4).FontSize(8);
+                                    //col.Item().Text("* يمنع الجري على السير").FontSize(8);
+                                    //col.Item().Text("* عدم إصطحاب الأطفال والاصدقاء").FontSize(8);
                                 });
                             });
                         });
                     });
                 });
             });
-
-            // Set the invoice document
+ 
             this._invoiceDocument = invoice;
+            // Set the invoice document
         }
 
         // Body cell style
