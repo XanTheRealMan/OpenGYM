@@ -280,6 +280,7 @@
             CustomerBirthDate.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
             CustomerBirthDate.MinDate = new DateTime(1950, 1, 1, 0, 0, 0, 0);
             CustomerBirthDate.Name = "CustomerBirthDate";
+            CustomerBirthDate.RightToLeftLayout = true;
             CustomerBirthDate.Size = new Size(200, 23);
             CustomerBirthDate.TabIndex = 27;
             // 

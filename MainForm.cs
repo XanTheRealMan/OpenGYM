@@ -32,6 +32,7 @@ namespace OpenGYM
             this.btnNewSubscription.Click += BtnNewSubscriptionClick;
             this.btnSearchCustomer.Click += BtnSearchCustomerClick;
             this.btnSubsRecord.Click += BtnSubsRecordClick;
+            this.btnManageSubscriptions += BtnManageSubscriptionsClick;
             this.closeAllToolStripMenuItem.Click += CloseAllForms;
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
             this.FormClosed += (s, e) => Application.Exit();
@@ -52,6 +53,15 @@ namespace OpenGYM
                 this.btnManageUsers.Visible = false;
                 this.btnManageSubscriptions.Visible = false;
             }
+            this.title.BackColor = Color.Transparent;
+            this.title.Text = Properties.Settings.Default.GymName;
+        }
+
+        private void BtnManageSubscriptionsClick(object? sender, EventArgs e)
+        {
+            ManageSubscriptions newForm = new ManageSubscriptions();
+            newForm.MdiParent = this;
+            newForm.Show();
         }
 
         private void BtnSubsRecordClick(object? sender, EventArgs e)

@@ -108,6 +108,7 @@
             SubscriptionEndDate.Format = DateTimePickerFormat.Custom;
             SubscriptionEndDate.Location = new Point(6, 52);
             SubscriptionEndDate.Name = "SubscriptionEndDate";
+            SubscriptionEndDate.RightToLeftLayout = true;
             SubscriptionEndDate.Size = new Size(180, 23);
             SubscriptionEndDate.TabIndex = 18;
             // 
@@ -118,6 +119,7 @@
             SubscriptionBeginDate.Format = DateTimePickerFormat.Custom;
             SubscriptionBeginDate.Location = new Point(6, 21);
             SubscriptionBeginDate.Name = "SubscriptionBeginDate";
+            SubscriptionBeginDate.RightToLeftLayout = true;
             SubscriptionBeginDate.Size = new Size(180, 23);
             SubscriptionBeginDate.TabIndex = 17;
             // 

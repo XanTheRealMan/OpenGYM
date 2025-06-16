@@ -57,9 +57,11 @@
             aboutToolStripMenuItem = new ToolStripMenuItem();
             toolStripStatusLabel = new ToolStripStatusLabel();
             statusStrip1 = new StatusStrip();
+            title = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
             panel2.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -87,7 +89,7 @@
             panel3.Dock = DockStyle.Left;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(435, 85);
+            panel3.Size = new Size(448, 85);
             panel3.TabIndex = 0;
             // 
             // label2
@@ -125,10 +127,12 @@
             // panel4
             // 
             panel4.BackgroundImage = (Image)resources.GetObject("panel4.BackgroundImage");
+            panel4.Controls.Add(title);
             panel4.Dock = DockStyle.Right;
-            panel4.Location = new Point(0, 0);
+            panel4.Location = new Point(454, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1023, 85);
+            panel4.Padding = new Padding(7);
+            panel4.Size = new Size(569, 85);
             panel4.TabIndex = 1;
             // 
             // panel2
@@ -319,7 +323,7 @@
             // closeAllToolStripMenuItem
             // 
             closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            closeAllToolStripMenuItem.Size = new Size(180, 22);
+            closeAllToolStripMenuItem.Size = new Size(124, 22);
             closeAllToolStripMenuItem.Text = "إغلاق الكل";
             // 
             // helpToolStripMenuItem
@@ -332,7 +336,7 @@
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Size = new Size(130, 22);
             aboutToolStripMenuItem.Text = "عن التطبيق";
             // 
             // toolStripStatusLabel
@@ -349,6 +353,18 @@
             statusStrip1.Size = new Size(749, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
+            // 
+            // title
+            // 
+            title.Dock = DockStyle.Fill;
+            title.Font = new Font("HONOR Sans Arabic UI B", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            title.ForeColor = Color.White;
+            title.Location = new Point(7, 7);
+            title.Name = "title";
+            title.Size = new Size(555, 71);
+            title.TabIndex = 0;
+            title.Text = "منظومة إدارة النوادي";
+            title.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // MainForm
             // 
@@ -372,6 +388,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -413,5 +430,6 @@
         private Button btnManageSubscriptions;
         private Panel panel5;
         private Button btnSubsRecord;
+        private Label title;
     }
 }
