@@ -32,7 +32,7 @@ namespace OpenGYM
             this.btnNewSubscription.Click += BtnNewSubscriptionClick;
             this.btnSearchCustomer.Click += BtnSearchCustomerClick;
             this.btnSubsRecord.Click += BtnSubsRecordClick;
-            this.btnManageSubscriptions += BtnManageSubscriptionsClick;
+            this.btnManageSubscriptions.Click += BtnManageSubscriptionsClick;
             this.closeAllToolStripMenuItem.Click += CloseAllForms;
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
             this.FormClosed += (s, e) => Application.Exit();
